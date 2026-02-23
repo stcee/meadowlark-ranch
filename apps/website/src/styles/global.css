@@ -21,6 +21,7 @@
     --color-black: #1a1a1a;
     --color-gray: #666666;
     --color-gray-light: #999999;
+    --color-accent: #8b6914;
 
     /* Font families */
     --font-heading: 'Playfair Display', Georgia, serif;
@@ -40,12 +41,15 @@
     --color-black: #1a1a1a;
     --color-gray: #666666;
     --color-gray-light: #999999;
+    --color-accent: #8b6914;
     --color-green-dark: #1a3c2a;
     --color-green: #2d5a3f;
     --color-brown: #8b5a2b;
 
     --font-heading: 'Playfair Display', Georgia, serif;
     --font-body: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+    --font-primary: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+    --font-secondary: 'Playfair Display', Georgia, serif;
 
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;

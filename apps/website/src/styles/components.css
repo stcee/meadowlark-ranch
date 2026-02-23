@@ -731,6 +731,7 @@
 .story-section .btn--outline {
     border-width: 1px;
     padding: 0.875rem 2rem;
+    align-self: flex-start;
 }
 
 /* ===== Services Section ===== */
@@ -1398,6 +1399,57 @@ footer.footer {
     transform: scale(1.2);
 }
 
+/* ===== Shared Feature List ===== */
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.feature-list li {
+    position: relative;
+    padding: 0.5rem 0 0.5rem 2rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-gray, #666);
+}
+
+.feature-list li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent, #8b6914);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* ===== Content Page Enhancements ===== */
+.content-section h2 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    margin-bottom: 1.25rem;
+}
+
+.content-section .btn--outline {
+    align-self: flex-start;
+    margin-top: 1rem;
+}
+
+.content-section__image img {
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease;
+}
+
+.content-section__image img:hover {
+    transform: scale(1.02);
+}
+
+/* Section divider decoration */
+.content-section + .content-section {
+    border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+
 /* ===== Back to Top Button ===== */
 .back-to-top {
     position: fixed;
@@ -1421,7 +1473,7 @@ footer.footer {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.back-to-top.visible {
+.back-to-top.back-to-top--visible {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
