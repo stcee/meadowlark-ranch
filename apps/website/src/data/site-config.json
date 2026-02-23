@@ -1,0 +1,32 @@
+{
+  "siteName": "Meadowlark Ranch",
+  "tagline": "Boulder County, Colorado",
+  "description": "A vibrant guest ranch dedicated to preserving heritage horse breeds and fostering meaningful connections through immersive equine experiences.",
+  "url": "https://meadowlarkranch.com",
+  "locations": {
+    "main": {
+      "name": "Meadowlark Ranch",
+      "address": "5384 St Vrain Rd",
+      "city": "Longmont",
+      "state": "CO",
+      "zip": "80503",
+      "phone": "(303) 555-0180",
+      "email": "info@meadowlarkranch.com"
+    },
+    "ranchToo": {
+      "name": "Meadowlark Ranch Too",
+      "address": "10500 N 49th St",
+      "city": "Longmont",
+      "state": "CO",
+      "zip": "80503",
+      "phone": "(303) 555-0181",
+      "email": "percherons@meadowlarkranch.com"
+    }
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/meadowlarkranch",
+    "instagram": "https://www.instagram.com/meadowlarkranch",
+    "youtube": "https://www.youtube.com/@meadowlarkranch3021"
+  },
+  "copyright": "2026 Meadowlark Ranch. All rights reserved."
+}

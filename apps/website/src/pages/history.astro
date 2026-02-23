@@ -1,0 +1,72 @@
+---
+import ContentPageLayout from '../layouts/ContentPageLayout.astro';
+---
+
+<ContentPageLayout
+  title="History"
+  description="From Meadowlark Shires to a premier Colorado guest ranch — explore the rich history and evolution of Meadowlark Ranch in Boulder County."
+  heroLabel="About Us"
+  heroImage="/images/cowboy-silhouette.webp"
+  breadcrumbs={[{label: 'Home', href: '/'}, {label: 'About'}, {label: 'History'}]}
+  cta={{title: 'Be Part of Our Story', text: 'Visit Meadowlark Ranch and experience our living heritage firsthand.', buttonText: 'Plan Your Visit', buttonLink: '/contact'}}
+>
+  <section class="content-section section--cream">
+    <div class="container">
+      <div class="content-section__grid">
+        <div>
+          <h2>Where It All Began</h2>
+          <p class="content-section__text">Meadowlark Ranch traces its origins to Meadowlark Shires, a small family operation dedicated to the care and appreciation of draft horses in Boulder County, Colorado. What began as a personal passion for these gentle giants soon grew into something far greater — a vision for a place where horses and humans could heal together.</p>
+          <p class="content-section__text">Founded by Dr. Kirk Mitchell, the ranch was built on the belief that the bond between people and horses holds extraordinary power — the power to restore, to teach, and to transform.</p>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/ranch-photo-1.webp" alt="Early days at Meadowlark Ranch" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="content-section__grid content-section__grid--reverse">
+        <div>
+          <h2>The Evolution to Integrated Healing</h2>
+          <p class="content-section__text">As the ranch grew, so did its mission. Dr. Mitchell's background in compassionate medicine led to the integration of equine-assisted therapeutic modalities, transforming Meadowlark Ranch into a sanctuary for emotional, behavioral, and relational healing.</p>
+          <p class="content-section__text">Today, the ranch offers professional therapeutic programs for children, families, individuals, and groups — all set within an environment carefully designed to nurture growth and well-being.</p>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/ranch-photo-2.webp" alt="Meadowlark Ranch healing programs" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--cream">
+    <div class="container">
+      <div class="content-section__grid">
+        <div>
+          <h2>CCP Percherons — 2024 and Beyond</h2>
+          <p class="content-section__text">In 2024, Meadowlark Ranch launched the CCP Percherons program, a competitive draft horse showing initiative dedicated to preserving the Percheron breed. Named after Compassionate Concierge Physicians, the program represents the intersection of Dr. Mitchell's two greatest passions — medicine and horsemanship.</p>
+          <p class="content-section__text">The CCP Percherons hitch has quickly become a recognized presence at regional draft horse competitions, carrying forward a tradition that nearly vanished when Percheron registrations dropped to just 85 animals in 1954.</p>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/percherons-2.webp" alt="CCP Percherons competing" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="content-section__grid content-section__grid--reverse">
+        <div>
+          <h2>Sustainable Stewardship — Solar Power 2020</h2>
+          <p class="content-section__text">In 2020, Meadowlark Ranch took a significant step toward environmental responsibility by installing a comprehensive solar power system across the property. This commitment to renewable energy reflects our broader philosophy of stewardship — caring for the land, the animals, and the community.</p>
+          <p class="content-section__text">The solar installation was one of many milestones in our ongoing journey to operate as a model of sustainable ranching in Colorado's Front Range.</p>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/ranch-photo-3.webp" alt="Solar panels at Meadowlark Ranch" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+</ContentPageLayout>

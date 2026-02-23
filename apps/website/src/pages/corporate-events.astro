@@ -1,0 +1,115 @@
+---
+import ContentPageLayout from '../layouts/ContentPageLayout.astro';
+---
+
+<ContentPageLayout
+  title="Corporate Events"
+  description="Host sophisticated corporate retreats, meetings, and events at Meadowlark Ranch — an inspiring Colorado venue where business meets the beauty of the West."
+  heroLabel="Corporate"
+  heroImage="/images/lifestyle-1.webp"
+  breadcrumbs={[{label: 'Home', href: '/'}, {label: 'Events'}, {label: 'Corporate Events'}]}
+  cta={{title: 'Elevate Your Next Event', text: 'Discover how Meadowlark Ranch can transform your corporate gathering into an unforgettable experience.', buttonText: 'Request a Proposal', buttonLink: '/contact'}}
+>
+  <section class="content-section section--cream">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>Where Business Meets Inspiration</h2>
+      <p class="content-section__text">Step beyond the boardroom and into a setting that sparks creativity, fosters authentic connection, and elevates every aspect of your corporate gathering. Meadowlark Ranch offers world-class facilities, impeccable service, and an atmosphere that transforms meetings into memorable experiences.</p>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="content-section__grid">
+        <div>
+          <h2>Corporate Retreats</h2>
+          <p class="content-section__text">Our retreat programs are designed to take your team out of their comfort zone and into a space that encourages fresh thinking, strategic planning, and genuine bonding. Set against the backdrop of the Colorado foothills, Meadowlark Ranch provides the ideal environment for focused work and meaningful connection.</p>
+          <ul class="feature-list">
+            <li>Strategic planning and vision-setting sessions</li>
+            <li>Executive leadership development programs</li>
+            <li>Wellness-forward retreat programming</li>
+            <li>Nature-based mindfulness and resilience workshops</li>
+            <li>Custom itinerary design to meet your objectives</li>
+          </ul>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/ranch-photo-1.webp" alt="Corporate retreat at Meadowlark Ranch" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--cream">
+    <div class="container">
+      <div class="content-section__grid content-section__grid--reverse">
+        <div>
+          <h2>Meetings &amp; Conferences</h2>
+          <p class="content-section__text">Our indoor meeting spaces are equipped with modern presentation technology while retaining the warm, authentic character of the ranch. Whether you need a boardroom for twelve or an event space for two hundred, we have the flexibility and infrastructure to support productive gatherings of every size.</p>
+          <ul class="feature-list">
+            <li>Audio-visual equipment and high-speed WiFi</li>
+            <li>Flexible seating configurations</li>
+            <li>Climate-controlled indoor spaces</li>
+            <li>Breakout areas for small group discussions</li>
+            <li>On-site catering with custom menus</li>
+          </ul>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/ranch-photo-3.webp" alt="Meeting spaces at Meadowlark Ranch" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="content-section__grid">
+        <div>
+          <h2>Client Entertainment &amp; Hospitality</h2>
+          <p class="content-section__text">Impress clients and partners with an experience they will not find anywhere else. From private dinners in the barn to horse-drawn carriage tours and guided equine experiences, Meadowlark Ranch offers hospitality that goes far beyond the ordinary.</p>
+          <ul class="feature-list">
+            <li>Private dining experiences with curated menus</li>
+            <li>Horse-drawn carriage rides for VIP guests</li>
+            <li>Guided ranch tours with equine interactions</li>
+            <li>Custom branded event materials and signage</li>
+            <li>Professional photography services</li>
+          </ul>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/fire-chat.webp" alt="Client entertainment at Meadowlark Ranch" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--cream">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>Enhance Your Event</h2>
+      <p class="content-section__text">Combine your corporate event with our signature team building experiences for maximum impact. Our equine-assisted activities are proven to strengthen communication, build trust, and create lasting bonds among colleagues.</p>
+      <a href="/team-building" class="btn btn--outline">Explore Team Building Programs</a>
+    </div>
+  </section>
+</ContentPageLayout>
+
+<style>
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+  }
+
+  .feature-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.75rem;
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text, #4a4a4a);
+  }
+
+  .feature-list li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent, #8b6914);
+    font-weight: bold;
+  }
+</style>

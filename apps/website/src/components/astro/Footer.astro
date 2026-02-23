@@ -1,0 +1,49 @@
+---
+import navigationData from '@data/navigation.json';
+import siteConfig from '@data/site-config.json';
+
+const { footer } = navigationData;
+---
+
+<footer class="footer">
+  <div class="footer__top">
+    <div class="container">
+      <h2 class="footer__tagline">We ride together.</h2>
+
+      <div class="footer__grid">
+        {footer.columns.map((column: any) => (
+          <div class="footer__column">
+            <h3 class="footer__column-title">{column.heading}</h3>
+            <div class="footer__links">
+              {column.links.map((link: any) => (
+                <a href={link.href} class="footer__link">{link.label}</a>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="footer__logo">
+        <img src="/images/horse-footer.gif" alt="Meadowlark Ranch Horse" style="height: 80px;">
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <img src="/images/hero-bg.webp" alt="" class="footer__bottom-bg" style="object-position: center 20%;">
+    <div class="container">
+      <div class="footer__bottom-content">
+        <div class="footer__brand">
+          <img src="/images/footer-logo.png" alt="Meadowlark Ranch" class="footer__brand-logo">
+          <div class="footer__brand-text">MEADOWLARK<br>RANCH</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__copyright">
+    <div class="container">
+      <p>&copy; {siteConfig.copyright} | <a href="/sitemap">Sitemap</a></p>
+    </div>
+  </div>
+</footer>

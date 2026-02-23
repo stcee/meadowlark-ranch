@@ -1,0 +1,188 @@
+---
+import ContentPageLayout from '../layouts/ContentPageLayout.astro';
+---
+
+<ContentPageLayout
+  title="Sponsorships"
+  description="Explore sponsorship opportunities at Meadowlark Ranch — support heritage horse preservation and gain premium visibility at Colorado's premier guest ranch."
+  heroLabel="Support Our Mission"
+  heroImage="/images/percherons-2.webp"
+  breadcrumbs={[{label: 'Home', href: '/'}, {label: 'About'}, {label: 'Sponsorships'}]}
+  cta={{title: 'Become a Sponsor', text: 'Join a community of passionate supporters dedicated to preserving heritage horse breeds and creating transformative experiences.', buttonText: 'Contact Us', buttonLink: '/contact'}}
+>
+  <section class="content-section section--cream">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>Partner in Preservation</h2>
+      <p class="content-section__text">Sponsoring Meadowlark Ranch means more than brand visibility — it means joining a meaningful mission to preserve heritage horse breeds, support equine-assisted healing, and sustain a Colorado landmark for generations to come.</p>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="sponsor-tiers">
+
+        <div class="sponsor-tier sponsor-tier--platinum">
+          <div class="sponsor-tier__header">
+            <h3 class="sponsor-tier__title">Platinum Sponsor</h3>
+            <p class="sponsor-tier__subtitle">Premier Partnership</p>
+          </div>
+          <div class="sponsor-tier__content">
+            <ul class="sponsor-tier__benefits">
+              <li>Exclusive naming rights for a signature Meadowlark Ranch event</li>
+              <li>Premium logo placement on all ranch marketing materials and website</li>
+              <li>VIP access to all ranch events throughout the year</li>
+              <li>Private carriage experience for up to 12 guests annually</li>
+              <li>Featured profile in ranch newsletter and social media campaigns</li>
+              <li>Dedicated on-site signage at the ranch entrance and arena</li>
+              <li>Annual private dinner at the ranch for sponsor and guests</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sponsor-tier sponsor-tier--gold">
+          <div class="sponsor-tier__header">
+            <h3 class="sponsor-tier__title">Gold Sponsor</h3>
+            <p class="sponsor-tier__subtitle">Distinguished Partnership</p>
+          </div>
+          <div class="sponsor-tier__content">
+            <ul class="sponsor-tier__benefits">
+              <li>Logo placement on ranch website and select marketing materials</li>
+              <li>VIP access to two signature ranch events annually</li>
+              <li>Private carriage experience for up to 8 guests annually</li>
+              <li>Recognition in ranch newsletter and social media features</li>
+              <li>On-site signage at the ranch arena during events</li>
+              <li>Invitation to annual sponsor appreciation reception</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sponsor-tier sponsor-tier--silver">
+          <div class="sponsor-tier__header">
+            <h3 class="sponsor-tier__title">Silver Sponsor</h3>
+            <p class="sponsor-tier__subtitle">Valued Partnership</p>
+          </div>
+          <div class="sponsor-tier__content">
+            <ul class="sponsor-tier__benefits">
+              <li>Logo placement on ranch website sponsor page</li>
+              <li>Complimentary admission to one signature ranch event</li>
+              <li>Recognition in ranch newsletter</li>
+              <li>Private ranch tour for up to 6 guests</li>
+              <li>Invitation to annual sponsor appreciation reception</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sponsor-tier sponsor-tier--bronze">
+          <div class="sponsor-tier__header">
+            <h3 class="sponsor-tier__title">Bronze Sponsor</h3>
+            <p class="sponsor-tier__subtitle">Community Partnership</p>
+          </div>
+          <div class="sponsor-tier__content">
+            <ul class="sponsor-tier__benefits">
+              <li>Name listed on ranch website sponsor page</li>
+              <li>Recognition in ranch newsletter</li>
+              <li>Private ranch tour for up to 4 guests</li>
+              <li>Complimentary ranch merchandise package</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--cream">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>Custom Sponsorship Packages</h2>
+      <p class="content-section__text">We understand that every organization has unique goals. Our team is happy to work with you to create a custom sponsorship package tailored to your brand, budget, and desired level of involvement. Contact us to start the conversation.</p>
+    </div>
+  </section>
+</ContentPageLayout>
+
+<style>
+  .sponsor-tiers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .sponsor-tier {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: var(--color-white, #fff);
+  }
+
+  .sponsor-tier:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  }
+
+  .sponsor-tier__header {
+    padding: 1.5rem;
+    text-align: center;
+    color: #fff;
+  }
+
+  .sponsor-tier--platinum .sponsor-tier__header {
+    background: linear-gradient(135deg, #2c1810, #4a3020);
+  }
+
+  .sponsor-tier--gold .sponsor-tier__header {
+    background: linear-gradient(135deg, #8b6914, #b8941e);
+  }
+
+  .sponsor-tier--silver .sponsor-tier__header {
+    background: linear-gradient(135deg, #6b6b6b, #8e8e8e);
+  }
+
+  .sponsor-tier--bronze .sponsor-tier__header {
+    background: linear-gradient(135deg, #7a5230, #a06b3e);
+  }
+
+  .sponsor-tier__title {
+    font-family: var(--font-heading, serif);
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .sponsor-tier__subtitle {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.9;
+  }
+
+  .sponsor-tier__content {
+    padding: 1.5rem;
+  }
+
+  .sponsor-tier__benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sponsor-tier__benefits li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--color-text, #4a4a4a);
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .sponsor-tier__benefits li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent, #8b6914);
+    font-weight: bold;
+  }
+
+  .sponsor-tier__benefits li:last-child {
+    border-bottom: none;
+  }
+</style>

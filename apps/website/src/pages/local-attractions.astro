@@ -1,0 +1,162 @@
+---
+import ContentPageLayout from '../layouts/ContentPageLayout.astro';
+import attractionData from '../data/attractions.json';
+
+const attractions = attractionData.attractions;
+---
+
+<ContentPageLayout
+  title="Local Attractions"
+  description="Explore the best attractions near Meadowlark Ranch — from Rocky Mountain National Park to charming mountain towns, discover Boulder County and beyond."
+  heroLabel="Local Area"
+  heroImage="/images/cowboy-silhouette.webp"
+  breadcrumbs={[{label: 'Home', href: '/'}, {label: 'Local Area'}, {label: 'Attractions'}]}
+  cta={{title: 'Plan Your Adventure', text: 'Need help planning activities for your visit? Our team can recommend the perfect itinerary.', buttonText: 'Contact Us', buttonLink: '/contact'}}
+>
+  <section class="content-section section--cream">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>Explore Boulder County &amp; Beyond</h2>
+      <p class="content-section__text">Meadowlark Ranch is surrounded by some of Colorado's most spectacular natural attractions, charming towns, and cultural destinations. Whether you are here for a day or a week, there is no shortage of adventures to complement your ranch experience.</p>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="attraction-grid">
+        {attractions.map((attraction) => (
+          <div class={`attraction-card ${attraction.featured ? 'attraction-card--featured' : ''}`}>
+            <div class="attraction-card__header">
+              <h3 class="attraction-card__name">{attraction.name}</h3>
+              <span class="attraction-card__type">{attraction.type}</span>
+            </div>
+            <p class="attraction-card__description">{attraction.description}</p>
+            <div class="attraction-card__meta">
+              <span class="attraction-card__drive-time">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                {attraction.driveTime}
+              </span>
+              <span class="attraction-card__distance">{attraction.distance}</span>
+            </div>
+            <div class="attraction-card__tags">
+              {attraction.tags.map((tag: string) => (
+                <span class="attraction-card__tag">{tag}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--cream">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>Getting Around</h2>
+      <p class="content-section__text">Most attractions are an easy drive from the ranch, with many accessible within 15 minutes. For directions to Meadowlark Ranch and detailed maps of the surrounding area, visit our directions page.</p>
+      <a href="/directions" class="btn btn--outline">Get Directions</a>
+    </div>
+  </section>
+</ContentPageLayout>
+
+<style>
+  .attraction-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 2rem;
+  }
+
+  .attraction-card {
+    background: var(--color-white, #fff);
+    border-radius: 12px;
+    padding: 1.75rem;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .attraction-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  }
+
+  .attraction-card--featured {
+    border-left: 4px solid var(--color-accent, #8b6914);
+  }
+
+  .attraction-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+  }
+
+  .attraction-card__name {
+    font-family: var(--font-heading, serif);
+    font-size: 1.2rem;
+    color: var(--color-primary, #2c1810);
+    margin: 0;
+  }
+
+  .attraction-card__type {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    color: var(--color-accent, #8b6914);
+    white-space: nowrap;
+    margin-left: 1rem;
+    padding: 0.2rem 0.6rem;
+    background: var(--color-primary-light, #f5f0e8);
+    border-radius: 100px;
+  }
+
+  .attraction-card__description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text, #4a4a4a);
+    flex: 1;
+  }
+
+  .attraction-card__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .attraction-card__drive-time {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    color: var(--color-primary, #2c1810);
+    font-weight: 600;
+  }
+
+  .attraction-card__distance {
+    font-size: 0.85rem;
+    color: var(--color-text-light, #777);
+  }
+
+  .attraction-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+  }
+
+  .attraction-card__tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: var(--color-primary-light, #f5f0e8);
+    border-radius: 100px;
+    font-size: 0.75rem;
+    color: var(--color-primary, #2c1810);
+    text-transform: lowercase;
+  }
+</style>

@@ -1,0 +1,47 @@
+---
+/**
+ * CtaSection.astro
+ * Call-to-action section with optional background image, title, text,
+ * and a primary action button. Matches the original .cta CSS.
+ */
+
+interface Props {
+  title: string;
+  text: string;
+  buttonText: string;
+  buttonLink: string;
+  backgroundImage?: string;
+}
+
+const { title, text, buttonText, buttonLink, backgroundImage } = Astro.props;
+---
+
+<section class="cta">
+  {backgroundImage && (
+    <img src={backgroundImage} alt="" class="cta__bg" loading="lazy" />
+  )}
+  <div class="container">
+    <div class="cta__content">
+      <h2 class="cta__title">{title}</h2>
+      <p class="cta__text">{text}</p>
+      <a href={buttonLink} class="btn btn--primary">
+        {buttonText}
+        <svg
+          class="btn-arrow"
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

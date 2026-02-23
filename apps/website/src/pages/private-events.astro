@@ -1,0 +1,110 @@
+---
+import ContentPageLayout from '../layouts/ContentPageLayout.astro';
+---
+
+<ContentPageLayout
+  title="Private Events"
+  description="Host an exclusive private gathering at Meadowlark Ranch — custom events designed around your vision in a stunning Boulder County, Colorado setting."
+  heroLabel="Events"
+  heroImage="/images/fire-chat.webp"
+  breadcrumbs={[{label: 'Home', href: '/'}, {label: 'Events'}, {label: 'Private Events'}]}
+  cta={{title: 'Your Event, Your Vision', text: 'Tell us what you have in mind and we will craft an experience that exceeds your expectations.', buttonText: 'Get Started', buttonLink: '/contact'}}
+>
+  <section class="content-section section--cream">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>Exclusively Yours</h2>
+      <p class="content-section__text">Some occasions call for something truly personal — a gathering designed around your vision, your guests, and your story. Meadowlark Ranch's private event services provide the setting, the expertise, and the attention to detail to make your event absolutely perfect.</p>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="content-section__grid">
+        <div>
+          <h2>Bespoke Event Design</h2>
+          <p class="content-section__text">No templates, no pre-set packages — every private event at Meadowlark Ranch begins with your vision. Our planning team works closely with you to understand your goals, preferences, and expectations, then designs a custom experience that reflects your personality and delights your guests.</p>
+          <p class="content-section__text">Whether you envision an elegant dinner under the stars, an afternoon of equestrian activities, or a multi-day gathering with curated programming, we bring it to life with seamless precision.</p>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/lifestyle-1.webp" alt="Private event at Meadowlark Ranch" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--cream">
+    <div class="container">
+      <div class="content-section__grid content-section__grid--reverse">
+        <div>
+          <h2>Intimate Gatherings</h2>
+          <p class="content-section__text">Meadowlark Ranch excels at creating intimate, meaningful experiences for smaller groups. Our spaces are designed to feel warm and personal, whether you are hosting a dinner party, a holiday gathering, a bridal shower, or a close-knit family celebration.</p>
+          <ul class="feature-list">
+            <li>Private dining for groups of 10 to 50</li>
+            <li>Fireside cocktail receptions</li>
+            <li>Wine and culinary tasting experiences</li>
+            <li>Seasonal holiday parties</li>
+            <li>Bridal and baby showers</li>
+          </ul>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/fire-chat.webp" alt="Intimate gathering at the ranch" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="content-section__grid">
+        <div>
+          <h2>Grand Celebrations</h2>
+          <p class="content-section__text">For larger gatherings, Meadowlark Ranch offers the space, infrastructure, and service level to host up to 200 guests with style. Our barn, pavilion, and outdoor grounds provide flexible options for events of significant scale while maintaining the warmth and character that define our venue.</p>
+          <ul class="feature-list">
+            <li>Full venue buyout for exclusive access</li>
+            <li>Multiple simultaneous event spaces</li>
+            <li>Complete vendor coordination and management</li>
+            <li>Custom bar and beverage programming</li>
+            <li>Live music, DJ, and entertainment arrangements</li>
+            <li>Guest transportation coordination</li>
+          </ul>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/ranch-photo-1.webp" alt="Grand celebration at Meadowlark Ranch" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--cream">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>Add a Ranch Experience</h2>
+      <p class="content-section__text">Make your private event even more special with our signature ranch experiences — horse-drawn carriage rides, guided equine interactions, and scenic nature walks that create unforgettable moments for your guests.</p>
+      <a href="/carriage-services" class="btn btn--outline">Explore Carriage Services</a>
+    </div>
+  </section>
+</ContentPageLayout>
+
+<style>
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+  }
+
+  .feature-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.75rem;
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text, #4a4a4a);
+  }
+
+  .feature-list li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent, #8b6914);
+    font-weight: bold;
+  }
+</style>

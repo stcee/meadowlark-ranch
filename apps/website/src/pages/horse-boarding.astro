@@ -1,0 +1,119 @@
+---
+import ContentPageLayout from '../layouts/ContentPageLayout.astro';
+---
+
+<ContentPageLayout
+  title="Horse Boarding"
+  description="Premium horse boarding services at Meadowlark Ranch Too — full-care stabling, spacious pastures, and expert management in Boulder County, Colorado."
+  heroLabel="Equine Services"
+  heroImage="/images/horses-field.webp"
+  breadcrumbs={[{label: 'Home', href: '/'}, {label: 'Equine Services'}, {label: 'Horse Boarding'}]}
+  cta={{title: 'Board With Us', text: 'Give your horse the care and environment they deserve. Contact us to discuss boarding availability and rates.', buttonText: 'Inquire About Boarding', buttonLink: '/contact'}}
+>
+  <section class="content-section section--cream">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>Premium Care for Your Horse</h2>
+      <p class="content-section__text">At Meadowlark Ranch Too, we treat every boarded horse with the same level of care and attention we give our own prized Percherons. Our boarding program combines modern facilities with traditional horsemanship, ensuring your horse thrives in a safe, comfortable, and well-managed environment.</p>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="content-section__grid">
+        <div>
+          <h2>Full-Care Boarding</h2>
+          <p class="content-section__text">Our full-care boarding program includes everything your horse needs to stay healthy, happy, and well-maintained. Our experienced team provides daily hands-on care, and our facilities are designed to support the physical and mental well-being of every equine resident.</p>
+          <ul class="feature-list">
+            <li>Daily feeding with premium hay and custom grain programs</li>
+            <li>Fresh water available in stalls and pastures at all times</li>
+            <li>Daily stall cleaning with premium bedding</li>
+            <li>Daily turnout in safe, well-maintained pastures</li>
+            <li>Blanketing and un-blanketing services</li>
+            <li>Fly spray and seasonal care protocols</li>
+            <li>Coordination with your farrier and veterinarian</li>
+          </ul>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/ranch-photo-2.webp" alt="Horse boarding stalls" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--cream">
+    <div class="container">
+      <div class="content-section__grid content-section__grid--reverse">
+        <div>
+          <h2>Facilities</h2>
+          <p class="content-section__text">Our purpose-built equine facility offers spacious, well-ventilated stalls, professional grooming and wash areas, and ample pasture acreage for daily turnout. Every aspect of the property is designed with horse welfare as the first priority.</p>
+          <ul class="feature-list">
+            <li>Large stalls with rubber mats and premium shavings</li>
+            <li>Heated wash bay for year-round grooming</li>
+            <li>Secure tack lockers for each boarder</li>
+            <li>Multiple pasture rotations for optimal grazing</li>
+            <li>Lighted outdoor arena for riding and training</li>
+            <li>Trailer parking with easy access</li>
+            <li>24/7 security cameras and monitoring</li>
+          </ul>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/horses-running.webp" alt="Boarding facilities at Meadowlark Ranch Too" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="content-section__grid">
+        <div>
+          <h2>Health &amp; Wellness</h2>
+          <p class="content-section__text">The health of your horse is our top priority. Our team monitors every animal daily for signs of illness, injury, or distress, and we maintain close relationships with local equine veterinarians for both routine and emergency care.</p>
+          <ul class="feature-list">
+            <li>Daily health checks and observation</li>
+            <li>On-call veterinary partnerships</li>
+            <li>Deworming and vaccination scheduling</li>
+            <li>Dental care coordination</li>
+            <li>Nutritional consultation and dietary adjustments</li>
+            <li>Emergency care protocols and planning</li>
+          </ul>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/cowgirl-hero.webp" alt="Horse care at Meadowlark Ranch" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--cream">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>Limited Availability</h2>
+      <p class="content-section__text">To ensure every horse receives the individual attention they deserve, we maintain limited boarding capacity. Spaces are available on a first-come, first-served basis. Contact us today to discuss your boarding needs and schedule a facility tour.</p>
+    </div>
+  </section>
+</ContentPageLayout>
+
+<style>
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+  }
+
+  .feature-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.75rem;
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text, #4a4a4a);
+  }
+
+  .feature-list li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent, #8b6914);
+    font-weight: bold;
+  }
+</style>

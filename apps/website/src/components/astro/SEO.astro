@@ -1,0 +1,48 @@
+---
+/**
+ * SEO.astro
+ * SEO meta tags component for the <head>. Renders title, description,
+ * canonical URL, Open Graph tags, and Twitter card meta.
+ * Use in the "seo" named slot of BaseLayout/PageLayout.
+ */
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalUrl?: string;
+  ogImage?: string;
+  type?: 'website' | 'article';
+}
+
+const {
+  title,
+  description,
+  canonicalUrl,
+  ogImage,
+  type = 'website',
+} = Astro.props;
+
+const fullTitle = `${title} | Meadowlark Ranch`;
+const siteName = 'Meadowlark Ranch';
+---
+
+<!-- Primary Meta -->
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+
+<!-- Canonical URL -->
+{canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+
+<!-- Open Graph -->
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content={type} />
+<meta property="og:site_name" content={siteName} />
+{canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+{ogImage && <meta property="og:image" content={ogImage} />}
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+{ogImage && <meta name="twitter:image" content={ogImage} />}

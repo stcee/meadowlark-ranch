@@ -1,0 +1,107 @@
+---
+import ContentPageLayout from '../layouts/ContentPageLayout.astro';
+import teamData from '../data/team-members.json';
+
+const members = teamData.members.sort((a, b) => a.sortOrder - b.sortOrder);
+---
+
+<ContentPageLayout
+  title="Leadership"
+  description="Meet the dedicated team behind Meadowlark Ranch — passionate horsemen, experienced leaders, and compassionate stewards of heritage horse preservation."
+  heroLabel="Our Team"
+  heroImage="/images/cowboy-silhouette.webp"
+  breadcrumbs={[{label: 'Home', href: '/'}, {label: 'About'}, {label: 'Leadership'}]}
+  cta={{title: 'Join Our Team', text: 'Interested in working with us or supporting our mission? We would love to hear from you.', buttonText: 'Contact Us', buttonLink: '/contact'}}
+>
+  <section class="content-section section--cream">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>The People Behind the Mission</h2>
+      <p class="content-section__text">Meadowlark Ranch is guided by a team of passionate individuals who bring decades of combined experience in equine care, competitive draft horse showing, and compassionate service. Together, they carry forward our mission of heritage preservation and healing.</p>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="team-grid">
+        {members.map((member) => (
+          <div class="team-card">
+            <div class="team-card__image">
+              <img src={`/images/${member.image}`} alt={member.name} loading="lazy">
+            </div>
+            <div class="team-card__content">
+              <h3 class="team-card__name">{member.name}</h3>
+              <p class="team-card__role">{member.role}</p>
+              <p class="team-card__bio">{member.bio}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--cream">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>A Shared Passion</h2>
+      <p class="content-section__text">Every member of our team shares a deep commitment to the well-being of our horses and the guests who visit our ranch. Whether training Percherons for competition, guiding therapeutic sessions, or welcoming event guests, our people are the heart of everything we do.</p>
+    </div>
+  </section>
+</ContentPageLayout>
+
+<style>
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+  }
+
+  .team-card {
+    background: var(--color-white, #fff);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .team-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  }
+
+  .team-card__image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+  }
+
+  .team-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .team-card__content {
+    padding: 1.5rem;
+  }
+
+  .team-card__name {
+    font-family: var(--font-heading, serif);
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    color: var(--color-primary, #2c1810);
+  }
+
+  .team-card__role {
+    font-size: 0.9rem;
+    color: var(--color-accent, #8b6914);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .team-card__bio {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--color-text, #4a4a4a);
+  }
+</style>

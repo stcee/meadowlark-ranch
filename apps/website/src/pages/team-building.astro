@@ -1,0 +1,109 @@
+---
+import ContentPageLayout from '../layouts/ContentPageLayout.astro';
+---
+
+<ContentPageLayout
+  title="Team Building"
+  description="Transform your team with equine-assisted team building experiences at Meadowlark Ranch — unique corporate programs that foster connection, leadership, and collaboration."
+  heroLabel="Corporate"
+  heroImage="/images/horses-running.webp"
+  breadcrumbs={[{label: 'Home', href: '/'}, {label: 'Events'}, {label: 'Team Building'}]}
+  cta={{title: 'Build a Stronger Team', text: 'Give your team an experience they will never forget — one that builds trust, communication, and resilience.', buttonText: 'Plan Your Retreat', buttonLink: '/contact'}}
+>
+  <section class="content-section section--cream">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>Where Teams Come Together</h2>
+      <p class="content-section__text">At Meadowlark Ranch, team building is more than ropes courses and trust falls. Our equine-assisted programs leverage the intuitive nature of horses to unlock communication, build empathy, and strengthen the bonds that make teams extraordinary.</p>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="content-section__grid">
+        <div>
+          <h2>Equine-Assisted Team Activities</h2>
+          <p class="content-section__text">Horses are remarkably attuned to human emotion and body language, making them powerful partners in team development. Our guided equine activities are designed by certified professionals to address specific team dynamics, including trust, communication, leadership, and problem-solving.</p>
+          <p class="content-section__text">No horse experience is required — our programs are accessible to everyone, from first-time visitors to experienced equestrians.</p>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/horses-field.webp" alt="Equine-assisted team building" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--cream">
+    <div class="container">
+      <div class="content-section__grid content-section__grid--reverse">
+        <div>
+          <h2>Program Highlights</h2>
+          <p class="content-section__text">Each team building experience is customized to your organization's goals and group size. Our facilitators work with you in advance to design a program that addresses your team's unique challenges and opportunities.</p>
+          <ul class="feature-list">
+            <li>Ground-based equine interaction exercises</li>
+            <li>Leadership and communication challenges</li>
+            <li>Collaborative problem-solving activities</li>
+            <li>Mindfulness and presence-building sessions</li>
+            <li>Facilitated debrief and reflection discussions</li>
+            <li>Optional ranch tour and carriage experience</li>
+          </ul>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/ranch-photo-2.webp" alt="Team building activities at the ranch" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="content-section__grid">
+        <div>
+          <h2>Half-Day &amp; Full-Day Programs</h2>
+          <p class="content-section__text">We offer flexible programming to fit your schedule and objectives. Our half-day experiences focus on one or two core activities, while full-day retreats provide a comprehensive journey through multiple exercises, meals, and reflective downtime.</p>
+          <ul class="feature-list">
+            <li>Half-day sessions: 3-4 hours of guided programming</li>
+            <li>Full-day retreats: 6-8 hours including meals and breaks</li>
+            <li>Multi-day experiences available for deeper engagement</li>
+            <li>Custom catering with locally sourced menus</li>
+            <li>Indoor and outdoor meeting spaces</li>
+          </ul>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/fire-chat.webp" alt="Team gathering at Meadowlark Ranch" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--cream">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>Why Horses?</h2>
+      <p class="content-section__text">Horses are honest mirrors — they respond to authenticity, not authority. Working with horses in a team setting reveals patterns, uncovers strengths, and creates breakthrough moments that traditional team building exercises simply cannot replicate. The result is a more connected, communicative, and resilient team.</p>
+    </div>
+  </section>
+</ContentPageLayout>
+
+<style>
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+  }
+
+  .feature-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.75rem;
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text, #4a4a4a);
+  }
+
+  .feature-list li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent, #8b6914);
+    font-weight: bold;
+  }
+</style>

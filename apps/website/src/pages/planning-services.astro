@@ -1,0 +1,152 @@
+---
+import ContentPageLayout from '../layouts/ContentPageLayout.astro';
+---
+
+<ContentPageLayout
+  title="Event Planning Services"
+  description="Full-service event planning at Meadowlark Ranch — from concept to execution, our expert team delivers flawless celebrations in Boulder County, Colorado."
+  heroLabel="Events"
+  heroImage="/images/lifestyle-1.webp"
+  breadcrumbs={[{label: 'Home', href: '/'}, {label: 'Events'}, {label: 'Event Planning Services'}]}
+  cta={{title: 'Let Us Plan Your Event', text: 'From first concept to final farewell, our team is with you every step of the way.', buttonText: 'Request a Consultation', buttonLink: '/contact'}}
+>
+  <section class="content-section section--cream">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>Effortless Elegance, Every Detail</h2>
+      <p class="content-section__text">At Meadowlark Ranch, event planning is an art form. Our experienced coordinators bring your vision to life with meticulous attention to detail, creative problem-solving, and a deep understanding of what makes gatherings truly memorable.</p>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="content-section__grid">
+        <div>
+          <h2>Full-Service Event Coordination</h2>
+          <p class="content-section__text">Our comprehensive planning services cover every aspect of your event, ensuring a seamless experience from start to finish. Whether you are hosting an intimate dinner for twenty or a grand celebration for hundreds, our team manages all the details.</p>
+          <ul class="feature-list">
+            <li>Initial consultation and vision development</li>
+            <li>Venue layout and design planning</li>
+            <li>Vendor sourcing and coordination</li>
+            <li>Custom catering menu design</li>
+            <li>Decor, floral, and lighting arrangements</li>
+            <li>Entertainment and activity programming</li>
+            <li>Day-of event management and coordination</li>
+            <li>Post-event wrap-up and follow-through</li>
+          </ul>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/ranch-photo-1.webp" alt="Event planning at Meadowlark Ranch" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--cream">
+    <div class="container">
+      <div class="content-section__grid content-section__grid--reverse">
+        <div>
+          <h2>Venue Options</h2>
+          <p class="content-section__text">Meadowlark Ranch offers a collection of distinctive indoor and outdoor spaces, each with its own character and charm. Our team will help you select the perfect setting for your event and configure it to meet your specific needs.</p>
+          <ul class="feature-list">
+            <li>Rustic-luxury barn with seating for up to 200 guests</li>
+            <li>Covered outdoor pavilion with panoramic mountain views</li>
+            <li>Manicured ceremony and event lawns</li>
+            <li>Intimate fireside gathering areas</li>
+            <li>Climate-controlled indoor spaces for year-round events</li>
+          </ul>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/ranch-photo-3.webp" alt="Venue spaces at Meadowlark Ranch" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="content-section__grid">
+        <div>
+          <h2>Signature Ranch Experiences</h2>
+          <p class="content-section__text">Enhance any event with experiences unique to Meadowlark Ranch. Our signature additions elevate your gathering from memorable to truly extraordinary.</p>
+          <ul class="feature-list">
+            <li>Horse-drawn carriage arrivals and departures</li>
+            <li>Guided ranch tours and horse meet-and-greets</li>
+            <li>Sunset horseback rides along scenic trails</li>
+            <li>Bird sanctuary nature walks</li>
+            <li>Fireside storytelling and s'mores stations</li>
+            <li>Custom ranch photography sessions</li>
+          </ul>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/carriage-ride.webp" alt="Signature experiences at Meadowlark Ranch" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--cream">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>Event Types We Specialize In</h2>
+      <div class="event-types-grid">
+        <a href="/weddings" class="event-type-link">Weddings</a>
+        <a href="/special-occasions" class="event-type-link">Special Occasions</a>
+        <a href="/corporate-events" class="event-type-link">Corporate Events</a>
+        <a href="/team-building" class="event-type-link">Team Building</a>
+        <a href="/private-events" class="event-type-link">Private Events</a>
+        <a href="/carriage-services" class="event-type-link">Carriage Services</a>
+      </div>
+    </div>
+  </section>
+</ContentPageLayout>
+
+<style>
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+  }
+
+  .feature-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.75rem;
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text, #4a4a4a);
+  }
+
+  .feature-list li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent, #8b6914);
+    font-weight: bold;
+  }
+
+  .event-types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .event-type-link {
+    display: block;
+    padding: 1rem 1.5rem;
+    background: var(--color-white, #fff);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--color-primary, #2c1810);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+
+  .event-type-link:hover {
+    background: var(--color-primary, #2c1810);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+</style>

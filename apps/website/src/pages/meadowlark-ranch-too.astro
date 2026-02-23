@@ -1,0 +1,116 @@
+---
+import ContentPageLayout from '../layouts/ContentPageLayout.astro';
+---
+
+<ContentPageLayout
+  title="Meadowlark Ranch Too"
+  description="Tour Meadowlark Ranch Too — our dedicated equine training and boarding facility, home to the CCP Percherons program in Boulder County, Colorado."
+  heroLabel="Equine"
+  heroImage="/images/slider-3.webp"
+  breadcrumbs={[{label: 'Home', href: '/'}, {label: 'Equine'}, {label: 'Meadowlark Ranch Too'}]}
+  cta={{title: 'Schedule a Tour', text: 'See our world-class equine facilities firsthand and meet the CCP Percherons.', buttonText: 'Book a Tour', buttonLink: '/contact'}}
+>
+  <section class="content-section section--cream">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>Our Equine Home</h2>
+      <p class="content-section__text">Meadowlark Ranch Too is our dedicated equine facility — a purpose-built property designed to provide the highest standard of care, training, and housing for our heritage Percheron horses and boarded equine guests. Located in the heart of Boulder County, the facility combines traditional horsemanship with modern amenities.</p>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="content-section__grid">
+        <div>
+          <h2>Training Facility</h2>
+          <p class="content-section__text">At the heart of Meadowlark Ranch Too is our professional training arena, where the CCP Percherons are prepared for competition under the guidance of head trainer Wilbur Helmuth and assistant trainer Makenna Helmuth. The facility is equipped to handle the unique demands of draft horse training, from hitch work to individual driving.</p>
+          <p class="content-section__text">Our training philosophy emphasizes patience, respect, and the time-honored methods that have been passed down through generations of Percheron horsemen.</p>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/percherons-2.webp" alt="Training facility at Meadowlark Ranch Too" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--cream">
+    <div class="container">
+      <div class="content-section__grid content-section__grid--reverse">
+        <div>
+          <h2>Barn &amp; Stabling</h2>
+          <p class="content-section__text">Our barn is designed with the well-being of the horse as the top priority. Spacious stalls, excellent ventilation, and natural light create a comfortable environment for our horses year-round. The facility accommodates both our resident Percheron herd and boarded horses.</p>
+          <ul class="feature-list">
+            <li>Spacious stalls with premium bedding</li>
+            <li>Climate-controlled wash bay and grooming areas</li>
+            <li>Secure tack rooms and equipment storage</li>
+            <li>Feed room with custom nutrition programs</li>
+            <li>24/7 security monitoring</li>
+          </ul>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/ranch-photo-2.webp" alt="Barn facilities at Meadowlark Ranch Too" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="content-section__grid">
+        <div>
+          <h2>Pastures &amp; Turnout</h2>
+          <p class="content-section__text">Our horses enjoy access to well-maintained pastures with safe, sturdy fencing, fresh water sources, and shelter from the elements. We practice rotational grazing to maintain pasture health, and our turnout schedule ensures every horse receives ample time to move, socialize, and simply be a horse.</p>
+          <p class="content-section__text">The property features scenic pathways and observation areas where visitors can watch the horses at rest and in motion — a peaceful experience that reminds us why we do what we do.</p>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/horses-field.webp" alt="Pastures at Meadowlark Ranch Too" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--cream">
+    <div class="container">
+      <div class="content-section__grid content-section__grid--reverse">
+        <div>
+          <h2>Facility Tours</h2>
+          <p class="content-section__text">We welcome visitors to experience Meadowlark Ranch Too through guided facility tours. Tours include a walk-through of the barn and training areas, an introduction to our Percheron herd, and the opportunity to learn about heritage horse preservation from our knowledgeable staff.</p>
+          <ul class="feature-list">
+            <li>Guided tours available by appointment</li>
+            <li>Meet the CCP Percherons up close</li>
+            <li>Learn about draft horse training and care</li>
+            <li>Educational presentations for groups and schools</li>
+            <li>Photography opportunities with our horses</li>
+          </ul>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/cowgirl-hero.webp" alt="Facility tour at Meadowlark Ranch Too" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+</ContentPageLayout>
+
+<style>
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+  }
+
+  .feature-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.75rem;
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text, #4a4a4a);
+  }
+
+  .feature-list li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent, #8b6914);
+    font-weight: bold;
+  }
+</style>

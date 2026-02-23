@@ -1,0 +1,73 @@
+---
+/**
+ * ContentPageLayout.astro
+ * Extends PageLayout. Adds a page hero banner, optional breadcrumbs,
+ * and an optional CTA section at the bottom. Ideal for interior/content pages.
+ */
+
+import PageLayout from './PageLayout.astro';
+import PageHero from '../components/astro/PageHero.astro';
+import Breadcrumbs from '../components/astro/Breadcrumbs.astro';
+import CtaSection from '../components/astro/CtaSection.astro';
+
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+interface CtaData {
+  title: string;
+  text: string;
+  buttonText: string;
+  buttonLink: string;
+  backgroundImage?: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  heroImage?: string;
+  heroImageAlt?: string;
+  heroLabel?: string;
+  breadcrumbs?: BreadcrumbItem[];
+  cta?: CtaData;
+}
+
+const {
+  title,
+  description,
+  heroImage,
+  heroImageAlt,
+  heroLabel,
+  breadcrumbs,
+  cta,
+} = Astro.props;
+---
+
+<PageLayout title={title} description={description}>
+  <slot name="seo" slot="seo" />
+
+  <PageHero
+    title={title}
+    label={heroLabel}
+    backgroundImage={heroImage}
+  />
+
+  {breadcrumbs && breadcrumbs.length > 0 && (
+    <Breadcrumbs items={breadcrumbs} />
+  )}
+
+  <main>
+    <slot />
+  </main>
+
+  {cta && (
+    <CtaSection
+      title={cta.title}
+      text={cta.text}
+      buttonText={cta.buttonText}
+      buttonLink={cta.buttonLink}
+      backgroundImage={cta.backgroundImage}
+    />
+  )}
+</PageLayout>

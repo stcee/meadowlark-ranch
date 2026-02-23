@@ -1,0 +1,93 @@
+---
+import ContentPageLayout from '../layouts/ContentPageLayout.astro';
+---
+
+<ContentPageLayout
+  title="Partnerships"
+  description="Discover partnership opportunities at Meadowlark Ranch — from Hope Held By A Horse to community collaborations supporting heritage horse preservation in Colorado."
+  heroLabel="Community"
+  heroImage="/images/horses-running.webp"
+  breadcrumbs={[{label: 'Home', href: '/'}, {label: 'About'}, {label: 'Partnerships'}]}
+  cta={{title: 'Partner With Us', text: 'Together, we can make a lasting impact on heritage horse preservation and community well-being.', buttonText: 'Start the Conversation', buttonLink: '/contact'}}
+>
+  <section class="content-section section--cream">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>Building Meaningful Connections</h2>
+      <p class="content-section__text">Meadowlark Ranch believes in the power of partnership. By working alongside organizations that share our values, we amplify our impact — creating deeper connections between horses and humans, and extending the reach of our preservation and healing mission.</p>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="content-section__grid">
+        <div>
+          <h2>Hope Held By A Horse</h2>
+          <p class="content-section__text">Our signature partnership program, Hope Held By A Horse, represents the very heart of our healing mission. This collaborative initiative brings together equine professionals, licensed therapists, and community organizations to provide equine-assisted therapeutic experiences for underserved populations.</p>
+          <p class="content-section__text">Through this program, children, veterans, first responders, and individuals facing emotional or behavioral challenges can experience the profound healing power of the human-horse bond — often at no cost to the participant. Hope Held By A Horse is made possible through the generosity of our sponsors and community partners.</p>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/horses-field.webp" alt="Hope Held By A Horse program" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--cream">
+    <div class="container">
+      <div class="content-section__grid content-section__grid--reverse">
+        <div>
+          <h2>Community Opportunities</h2>
+          <p class="content-section__text">Meadowlark Ranch is committed to being a positive force in Boulder County and the broader Colorado community. We welcome partnerships with organizations across a range of sectors, including:</p>
+          <ul class="content-section__list">
+            <li><strong>Educational Institutions:</strong> Field trips, internship programs, and curriculum-based learning experiences centered on equine science, ecology, and sustainability.</li>
+            <li><strong>Nonprofits &amp; Foundations:</strong> Collaborative programs that leverage our facilities and expertise to serve diverse populations.</li>
+            <li><strong>Local Businesses:</strong> Cross-promotional partnerships, event collaborations, and joint community initiatives.</li>
+            <li><strong>Equine Organizations:</strong> Breed registries, competitive associations, and conservation groups focused on heritage preservation.</li>
+          </ul>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/ranch-photo-2.webp" alt="Community partnerships at Meadowlark Ranch" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>How to Get Involved</h2>
+      <p class="content-section__text">Whether you represent a corporation, nonprofit, school, or local business, we welcome the opportunity to explore how we can work together. Every partnership at Meadowlark Ranch is built on shared values, mutual respect, and a genuine desire to make a difference.</p>
+      <p class="content-section__text">Reach out to our team to discuss how a partnership with Meadowlark Ranch can align with your goals and create lasting community impact.</p>
+    </div>
+  </section>
+</ContentPageLayout>
+
+<style>
+  .content-section__list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+  }
+
+  .content-section__list li {
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--color-text, #4a4a4a);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .content-section__list li::before {
+    content: '\2022';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent, #8b6914);
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .content-section__list li:last-child {
+    border-bottom: none;
+  }
+</style>

@@ -1,0 +1,131 @@
+{
+  "mainNav": [
+    {
+      "label": "Explore",
+      "type": "dropdown",
+      "sections": [
+        {
+          "heading": "About Us",
+          "links": [
+            { "label": "Mission & Vision", "href": "/mission-vision" },
+            { "label": "History", "href": "/history" },
+            { "label": "Stewardship & Responsibility", "href": "/stewardship" },
+            { "label": "Western States Classic", "href": "/western-states-classic" },
+            { "label": "Meadowlark Ranch Too", "href": "/meadowlark-ranch-too" },
+            { "label": "Ranch Map & Directions", "href": "/directions" }
+          ]
+        },
+        {
+          "heading": "Our Team",
+          "links": [
+            { "label": "Leadership", "href": "/leadership" },
+            { "label": "Sponsorships", "href": "/sponsorships" },
+            { "label": "Partnerships", "href": "/partnerships" }
+          ]
+        }
+      ],
+      "featuredCards": [
+        {
+          "title": "Our History",
+          "href": "/history",
+          "video": "/videos/equine-gif_mp4.mp4"
+        },
+        {
+          "title": "Partner With Us",
+          "href": "/partnerships",
+          "video": "/videos/MR-partner-video_mp4.mp4"
+        }
+      ]
+    },
+    {
+      "label": "Events",
+      "type": "dropdown",
+      "sections": [
+        {
+          "heading": "Private Events",
+          "links": [
+            { "label": "Weddings", "href": "/weddings" },
+            { "label": "Special Occasions", "href": "/special-occasions" },
+            { "label": "Event Services", "href": "/planning-services" },
+            { "label": "Carriage Rental", "href": "/carriage-services" }
+          ]
+        },
+        {
+          "heading": "Corporate Events",
+          "links": [
+            { "label": "Team Building", "href": "/team-building" },
+            { "label": "Corporate Events", "href": "/corporate-events" }
+          ]
+        }
+      ],
+      "featuredCards": [
+        {
+          "title": "Event Planning",
+          "href": "/planning-services",
+          "video": "/videos/Medowlark-event-space-video_mp4.mp4"
+        },
+        {
+          "title": "Special Occasions",
+          "href": "/special-occasions",
+          "video": "/videos/meadowlark-ranch-wedding-menu-video_mp4.mp4"
+        }
+      ]
+    },
+    {
+      "label": "Equine Services",
+      "type": "dropdown",
+      "sections": [
+        {
+          "heading": "Services",
+          "links": [
+            { "label": "Horse Boarding", "href": "/horse-boarding" },
+            { "label": "Horse Transport", "href": "/horse-transport" }
+          ]
+        }
+      ],
+      "featuredCards": []
+    },
+    {
+      "label": "About",
+      "type": "link",
+      "href": "/about"
+    },
+    {
+      "label": "Contact",
+      "type": "button",
+      "href": "/contact"
+    }
+  ],
+  "footer": {
+    "columns": [
+      {
+        "heading": "The Ranch",
+        "links": [
+          { "label": "Mission and Vision", "href": "/mission-vision" },
+          { "label": "History", "href": "/history" },
+          { "label": "Stewardship", "href": "/stewardship" },
+          { "label": "Get Directions", "href": "/directions" }
+        ]
+      },
+      {
+        "heading": "Ranch Experience",
+        "links": [
+          { "label": "Carriage Rentals", "href": "/carriage-services" },
+          { "label": "Horse Boarding", "href": "/horse-boarding" },
+          { "label": "Local Restaurants", "href": "/local-restaurants" },
+          { "label": "Local Attractions", "href": "/local-attractions" },
+          { "label": "Partnerships", "href": "/partnerships" }
+        ]
+      },
+      {
+        "heading": "Events",
+        "links": [
+          { "label": "Weddings", "href": "/weddings" },
+          { "label": "Special Occasions", "href": "/special-occasions" },
+          { "label": "Planning Services", "href": "/planning-services" },
+          { "label": "Team Building", "href": "/team-building" }
+        ]
+      }
+    ]
+  }
+}

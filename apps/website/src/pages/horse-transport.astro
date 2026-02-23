@@ -1,0 +1,110 @@
+---
+import ContentPageLayout from '../layouts/ContentPageLayout.astro';
+---
+
+<ContentPageLayout
+  title="Horse Transport"
+  description="Professional horse transport and hauling services from Meadowlark Ranch — safe, reliable equine transportation across Colorado and the western states."
+  heroLabel="Equine Services"
+  heroImage="/images/horses-running.webp"
+  breadcrumbs={[{label: 'Home', href: '/'}, {label: 'Equine Services'}, {label: 'Horse Transport'}]}
+  cta={{title: 'Request Transport', text: 'Trust your horse to the experienced hands of the Meadowlark Ranch transport team.', buttonText: 'Get a Quote', buttonLink: '/contact'}}
+>
+  <section class="content-section section--cream">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>Safe, Professional Horse Hauling</h2>
+      <p class="content-section__text">When it comes to transporting your horse, nothing matters more than safety, comfort, and reliability. Meadowlark Ranch offers professional equine transport services backed by decades of experience handling draft horses and all breeds — from local moves to long-distance hauls across the western states.</p>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="content-section__grid">
+        <div>
+          <h2>Our Transport Services</h2>
+          <p class="content-section__text">Whether you need to move a single horse across town or transport a team to a competition, our transport services are designed to deliver your animals safely and on time. Our fleet is maintained to the highest standards, and our drivers are experienced horsemen who understand how to keep horses calm and comfortable on the road.</p>
+          <ul class="feature-list">
+            <li>Local and regional horse transport across Colorado</li>
+            <li>Long-distance hauling throughout the western states</li>
+            <li>Competition transport for shows and events</li>
+            <li>New horse pickup and delivery</li>
+            <li>Veterinary and farrier appointment transport</li>
+            <li>Emergency transport services</li>
+          </ul>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/cowboy-silhouette.webp" alt="Horse transport services" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--cream">
+    <div class="container">
+      <div class="content-section__grid content-section__grid--reverse">
+        <div>
+          <h2>Equipment &amp; Safety</h2>
+          <p class="content-section__text">Our transport equipment is purpose-built for equine hauling and rigorously maintained. Every trailer is inspected before each trip, and our safety protocols ensure your horse arrives at their destination in the same condition they left.</p>
+          <ul class="feature-list">
+            <li>Well-maintained, air-ride trailers for a smooth ride</li>
+            <li>Rubber-matted flooring for traction and comfort</li>
+            <li>Proper ventilation and temperature management</li>
+            <li>Hay and water stops on long-distance hauls</li>
+            <li>GPS tracking for real-time location updates</li>
+            <li>Full insurance coverage for every transport</li>
+          </ul>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/ranch-photo-4.webp" alt="Transport equipment at Meadowlark Ranch" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="content-section__grid">
+        <div>
+          <h2>Draft Horse Specialists</h2>
+          <p class="content-section__text">As home to the CCP Percherons competitive hitch program, Meadowlark Ranch has extensive experience transporting large draft horses — a specialty that requires specialized equipment, expert handling, and meticulous attention to safety. If your horse is larger than average, you can trust that our team knows exactly how to handle the job.</p>
+          <p class="content-section__text">We regularly haul our own Percherons to competitions across Colorado and the western states, so we bring the same level of care and professionalism to every transport job we take on.</p>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/percherons-2.webp" alt="Draft horse transport specialists" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--cream">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>Request a Quote</h2>
+      <p class="content-section__text">Every transport job is unique, and we provide custom quotes based on distance, number of horses, and any special requirements. Contact us with your transport needs and we will provide a prompt, competitive quote.</p>
+    </div>
+  </section>
+</ContentPageLayout>
+
+<style>
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+  }
+
+  .feature-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.75rem;
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text, #4a4a4a);
+  }
+
+  .feature-list li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent, #8b6914);
+    font-weight: bold;
+  }
+</style>

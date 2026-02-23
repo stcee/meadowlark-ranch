@@ -1,0 +1,25 @@
+---
+/**
+ * ServiceCard.astro
+ * Service card with background image, overlay, title, and description.
+ * Links to a detail page. Matches the original .service-card CSS.
+ */
+
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  href: string;
+}
+
+const { title, description, image, href } = Astro.props;
+---
+
+<a href={href} class="service-card">
+  <img src={image} alt={title} class="service-card__bg" loading="lazy" />
+  <div class="service-card__overlay"></div>
+  <div class="service-card__content">
+    <h3 class="service-card__title">{title}</h3>
+    <p class="service-card__text">{description}</p>
+  </div>
+</a>

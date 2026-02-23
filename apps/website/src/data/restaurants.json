@@ -1,0 +1,148 @@
+{
+  "restaurants": [
+    {
+      "name": "Sugarbeet",
+      "slug": "sugarbeet",
+      "cuisine": "New American / Fine Dining",
+      "priceRange": "$$-$$$",
+      "address": "101 Pratt Street, Longmont, CO 80501",
+      "description": "Locally owned casual-elegant restaurant offering seasonal, locally sourced New American cuisine with an inventive cocktail menu. Named as an homage to Longmont's Great Western Sugar Factory.",
+      "distanceFromRanch": "7.2 miles",
+      "website": "#",
+      "tags": ["farm-to-table", "dinner", "cocktails"],
+      "featured": true
+    },
+    {
+      "name": "Martinis Bistro",
+      "slug": "martinis-bistro",
+      "cuisine": "American Fine Dining",
+      "priceRange": "$$-$$$",
+      "address": "3500 S Main Street, Longmont, CO 80503",
+      "description": "Longmont's premier fine-dining establishment housed in an 1890s home featuring classic cocktails, center-cut ribeye, and Boulder County's largest outdoor patio.",
+      "distanceFromRanch": "5.8 miles",
+      "website": "#",
+      "tags": ["fine-dining", "steaks", "patio"],
+      "featured": true
+    },
+    {
+      "name": "Rosalee's Pizzeria",
+      "slug": "rosalees-pizzeria",
+      "cuisine": "Italian-American",
+      "priceRange": "$-$$",
+      "address": "637 Main Street, Longmont, CO 80501",
+      "description": "East Coast-style pizza with homemade sausage, garlic knots, and a cozy setting with pinball machines and live music.",
+      "distanceFromRanch": "7.5 miles",
+      "website": "#",
+      "tags": ["pizza", "family-friendly", "live-music"],
+      "featured": false
+    },
+    {
+      "name": "Jefes Tacos & Tequila",
+      "slug": "jefes-tacos-and-tequila",
+      "cuisine": "Mexican",
+      "priceRange": "$-$$",
+      "address": "340 Main Street, Longmont, CO 80501",
+      "description": "Creative tacos from traditional al pastor to inventive chipotle crab, paired with signature margaritas and an impressive tequila selection.",
+      "distanceFromRanch": "7.3 miles",
+      "website": "#",
+      "tags": ["mexican", "tacos", "margaritas"],
+      "featured": false
+    },
+    {
+      "name": "Cheese Importers",
+      "slug": "cheese-importers",
+      "cuisine": "European Deli / Market",
+      "priceRange": "$-$$",
+      "address": "33 S Pratt Parkway, Longmont, CO 80501",
+      "description": "European-style marketplace featuring over 350 cheeses, including Colorado's largest walk-in cheese and cured meat refrigerator.",
+      "distanceFromRanch": "7.0 miles",
+      "website": "#",
+      "tags": ["deli", "cheese", "specialty-foods"],
+      "featured": true
+    },
+    {
+      "name": "Tortugas",
+      "slug": "tortugas",
+      "cuisine": "Caribbean / Cajun Seafood",
+      "priceRange": "$$",
+      "address": "1549 Pace Street, Longmont, CO 80504",
+      "description": "Operating since 1994 in a converted home, this cozy venue features fresh seafood with Caribbean and Cajun influences.",
+      "distanceFromRanch": "8.1 miles",
+      "website": "#",
+      "tags": ["seafood", "cajun", "patio"],
+      "featured": false
+    },
+    {
+      "name": "Aunt Alice's Kitchen",
+      "slug": "aunt-alices-kitchen",
+      "cuisine": "American Diner",
+      "priceRange": "$",
+      "address": "441 Main Street, Longmont, CO 80501",
+      "description": "An iconic Longmont diner serving breakfast staples and hearty comfort food since 1981. Known for chicken fried steak and prime rib.",
+      "distanceFromRanch": "7.4 miles",
+      "website": "#",
+      "tags": ["breakfast", "diner", "comfort-food"],
+      "featured": false
+    },
+    {
+      "name": "Flavor of India",
+      "slug": "flavor-of-india",
+      "cuisine": "Indian",
+      "priceRange": "$-$$",
+      "address": "300 Main Street, Longmont, CO 80501",
+      "description": "Authentic Indian cuisine since 2006 with a Main Street location featuring a rooftop patio and full bar.",
+      "distanceFromRanch": "7.3 miles",
+      "website": "#",
+      "tags": ["indian", "rooftop", "vegetarian-friendly"],
+      "featured": false
+    },
+    {
+      "name": "Westside Tavern",
+      "slug": "westside-tavern",
+      "cuisine": "Gastropub",
+      "priceRange": "$$",
+      "address": "920 Coffman Street, Longmont, CO 80501",
+      "description": "Intimate gastropub in Longmont's historic Westside neighborhood offering sophisticated cocktails and creative dishes.",
+      "distanceFromRanch": "7.6 miles",
+      "website": "#",
+      "tags": ["gastropub", "cocktails", "dinner"],
+      "featured": false
+    },
+    {
+      "name": "Left Hand Brewing Company",
+      "slug": "left-hand-brewing",
+      "cuisine": "Brewery",
+      "priceRange": "$",
+      "address": "1265 Boston Avenue, Longmont, CO 80501",
+      "description": "Award-winning craft brewery known for Nitro Stout with a seasonal beer garden and rotating tap selection.",
+      "distanceFromRanch": "6.9 miles",
+      "website": "#",
+      "tags": ["brewery", "beer-garden", "tours"],
+      "featured": true
+    },
+    {
+      "name": "Wibby Brewing",
+      "slug": "wibby-brewing",
+      "cuisine": "Brewery",
+      "priceRange": "$",
+      "address": "209 Emery Street, Longmont, CO 80501",
+      "description": "German-inspired lager brewery with an expansive outdoor biergarten hosting live music and community events.",
+      "distanceFromRanch": "7.1 miles",
+      "website": "#",
+      "tags": ["brewery", "biergarten", "live-music"],
+      "featured": false
+    },
+    {
+      "name": "Dry Land Distillers",
+      "slug": "dry-land-distillers",
+      "cuisine": "Craft Spirits",
+      "priceRange": "$$",
+      "address": "519 Main Street, Longmont, CO 80501",
+      "description": "Craft distillery in a historic Main Street building producing gin with Colorado botanicals and cactus spirit.",
+      "distanceFromRanch": "7.4 miles",
+      "website": "#",
+      "tags": ["distillery", "cocktails", "spirits"],
+      "featured": false
+    }
+  ]
+}

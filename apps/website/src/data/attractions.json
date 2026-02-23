@@ -1,0 +1,158 @@
+{
+  "attractions": [
+    {
+      "name": "Rocky Mountain National Park",
+      "slug": "rocky-mountain-national-park",
+      "type": "National Park",
+      "distance": "55 miles",
+      "driveTime": "~55 min",
+      "description": "One of America's most visited national parks with alpine lakes, peaks over 14,000 feet, and 350+ miles of trails.",
+      "website": "#",
+      "tags": ["hiking", "wildlife", "scenic-drives", "camping"],
+      "featured": true
+    },
+    {
+      "name": "Button Rock Preserve",
+      "slug": "button-rock-preserve",
+      "type": "Nature / Hiking",
+      "distance": "14 miles",
+      "driveTime": "~20 min",
+      "description": "Rugged wilderness preserve with trails offering stunning views of Ralph Price Reservoir and surrounding cliffs.",
+      "website": "#",
+      "tags": ["hiking", "reservoir", "nature", "photography"],
+      "featured": true
+    },
+    {
+      "name": "St. Vrain State Park",
+      "slug": "st-vrain-state-park",
+      "type": "State Park",
+      "distance": "6 miles",
+      "driveTime": "~10 min",
+      "description": "Over 600 acres with a dozen ponds for fishing, six miles of scenic trails, camping, and wildlife viewing.",
+      "website": "#",
+      "tags": ["fishing", "camping", "trails", "wildlife"],
+      "featured": true
+    },
+    {
+      "name": "Union Reservoir",
+      "slug": "union-reservoir",
+      "type": "Recreation",
+      "distance": "7 miles",
+      "driveTime": "~10 min",
+      "description": "Popular summer destination for windsurfing, paddleboarding, sailing, swimming, and sandy beach picnics.",
+      "website": "#",
+      "tags": ["water-sports", "beach", "swimming", "paddleboarding"],
+      "featured": false
+    },
+    {
+      "name": "McIntosh Lake",
+      "slug": "mcintosh-lake",
+      "type": "Recreation",
+      "distance": "6 miles",
+      "driveTime": "~10 min",
+      "description": "Surrounded by a 3.5-mile trail with panoramic mountain views, kayaking, paddleboarding, and fishing.",
+      "website": "#",
+      "tags": ["kayaking", "trails", "fishing", "mountain-views"],
+      "featured": false
+    },
+    {
+      "name": "Golden Ponds Nature Area",
+      "slug": "golden-ponds-nature-area",
+      "type": "Nature",
+      "distance": "5 miles",
+      "driveTime": "~8 min",
+      "description": "88-acre park with paved and unpaved trails excellent for viewing waterfowl and peaceful walks.",
+      "website": "#",
+      "tags": ["nature", "birdwatching", "trails", "family-friendly"],
+      "featured": false
+    },
+    {
+      "name": "Rabbit Mountain Open Space",
+      "slug": "rabbit-mountain-open-space",
+      "type": "Hiking / Equestrian",
+      "distance": "10 miles",
+      "driveTime": "~15 min",
+      "description": "Over five miles of trails open to pedestrians, bikes, and equestrians with spectacular Front Range views.",
+      "website": "#",
+      "tags": ["hiking", "equestrian", "mountain-biking", "views"],
+      "featured": true
+    },
+    {
+      "name": "Historic Downtown Longmont",
+      "slug": "historic-downtown-longmont",
+      "type": "Culture",
+      "distance": "8 miles",
+      "driveTime": "~12 min",
+      "description": "Walkable downtown with Dickens Opera House, first JC Penney store, galleries, and public art.",
+      "website": "#",
+      "tags": ["shopping", "dining", "history", "art"],
+      "featured": false
+    },
+    {
+      "name": "Longmont Museum & Cultural Center",
+      "slug": "longmont-museum-cultural-center",
+      "type": "Museum",
+      "distance": "8 miles",
+      "driveTime": "~12 min",
+      "description": "Vibrant hub for history, culture, and arts with 17,000+ objects and the award-winning 'Front Range Rising' exhibit.",
+      "website": "#",
+      "tags": ["museum", "history", "art", "family-friendly"],
+      "featured": false
+    },
+    {
+      "name": "Dougherty Museum",
+      "slug": "dougherty-museum",
+      "type": "Museum",
+      "distance": "10 miles",
+      "driveTime": "~15 min",
+      "description": "Collection of 40+ classic turn-of-the-century vehicles including rare Packard and Stanley models.",
+      "website": "#",
+      "tags": ["museum", "automobiles", "history", "vintage"],
+      "featured": false
+    },
+    {
+      "name": "St. Vrain Greenway",
+      "slug": "st-vrain-greenway",
+      "type": "Trail",
+      "distance": "3 miles",
+      "driveTime": "~5 min",
+      "description": "9-mile paved trail connecting Longmont areas, perfect for biking and walking along scenic St. Vrain Creek.",
+      "website": "#",
+      "tags": ["biking", "walking", "creek", "paved-trail"],
+      "featured": false
+    },
+    {
+      "name": "Dickens Farm Nature Area",
+      "slug": "dickens-farm-nature-area",
+      "type": "Park",
+      "distance": "8 miles",
+      "driveTime": "~12 min",
+      "description": "Longmont's newest park featuring Discovery Island play area, picnic spots, and river tubing access.",
+      "website": "#",
+      "tags": ["park", "playground", "tubing", "family-friendly"],
+      "featured": false
+    },
+    {
+      "name": "Estes Park",
+      "slug": "estes-park",
+      "type": "Mountain Town",
+      "distance": "48 miles",
+      "driveTime": "~50 min",
+      "description": "Charming mountain gateway to Rocky Mountain National Park with shops, restaurants, and stunning scenery.",
+      "website": "#",
+      "tags": ["mountain-town", "shopping", "dining", "scenic"],
+      "featured": true
+    },
+    {
+      "name": "Boulder",
+      "slug": "boulder",
+      "type": "College Town",
+      "distance": "18 miles",
+      "driveTime": "~20 min",
+      "description": "Vibrant university city with Pearl Street Mall, Flatirons hiking, world-class dining, and cultural attractions.",
+      "website": "#",
+      "tags": ["hiking", "dining", "shopping", "culture"],
+      "featured": false
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+---
+import ContentPageLayout from '../layouts/ContentPageLayout.astro';
+---
+
+<ContentPageLayout
+  title="Stewardship & Responsibility"
+  description="Learn about Meadowlark Ranch's commitment to sustainability, solar energy, bird sanctuaries, and responsible land stewardship in Boulder County, Colorado."
+  heroLabel="About Us"
+  heroImage="/images/horses-field.webp"
+  breadcrumbs={[{label: 'Home', href: '/'}, {label: 'About'}, {label: 'Stewardship & Responsibility'}]}
+  cta={{title: 'Support Our Mission', text: 'Partner with us to preserve heritage breeds and protect the land we all share.', buttonText: 'Get in Touch', buttonLink: '/contact'}}
+>
+  <section class="content-section section--cream">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>Our Commitment to the Land</h2>
+      <p class="content-section__text">At Meadowlark Ranch, stewardship is not a program — it is a way of life. Every decision we make, from how we power our facilities to how we manage our pastures, reflects our deep respect for the natural world and our responsibility to future generations.</p>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="content-section__grid">
+        <div>
+          <h2>Solar-Powered Ranch</h2>
+          <p class="content-section__text">Since 2020, Meadowlark Ranch has operated on a comprehensive solar power system that significantly reduces our carbon footprint. Our photovoltaic array generates clean energy for the barn, guest facilities, and operational buildings across the property.</p>
+          <p class="content-section__text">This investment in renewable energy is a cornerstone of our environmental commitment, demonstrating that world-class hospitality and ecological responsibility can thrive together.</p>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/ranch-photo-3.webp" alt="Solar panels powering Meadowlark Ranch" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--cream">
+    <div class="container">
+      <div class="content-section__grid content-section__grid--reverse">
+        <div>
+          <h2>Bird Sanctuaries</h2>
+          <p class="content-section__text">Meadowlark Ranch is home to dedicated bird sanctuaries that provide vital habitat for native and migratory species along Colorado's Front Range. Our carefully maintained wetland areas, nesting sites, and feeding stations support a thriving population of songbirds, raptors, and waterfowl.</p>
+          <p class="content-section__text">Guests are invited to enjoy peaceful walks along our bird sanctuary pathways, where sightings of meadowlarks, red-tailed hawks, great blue herons, and dozens of other species are a regular delight.</p>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/ranch-photo-4.webp" alt="Bird sanctuary at Meadowlark Ranch" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="content-section__grid">
+        <div>
+          <h2>Sustainable Practices</h2>
+          <p class="content-section__text">Our approach to sustainable ranching encompasses every aspect of operations — from rotational grazing that preserves pasture health, to water conservation systems that protect Colorado's precious resources, to composting programs that return nutrients to the soil.</p>
+          <p class="content-section__text">We work closely with local conservation organizations to ensure our practices align with the highest standards of environmental stewardship, and we continuously seek new ways to minimize our impact on the land.</p>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/horses-field.webp" alt="Sustainable pastures at Meadowlark Ranch" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--cream">
+    <div class="container">
+      <div class="content-section__grid content-section__grid--reverse">
+        <div>
+          <h2>Wildlife Preservation</h2>
+          <p class="content-section__text">Beyond our equine residents, Meadowlark Ranch serves as a refuge for the diverse wildlife of Boulder County. Our property management strategies prioritize habitat connectivity, native plant restoration, and the preservation of natural corridors that allow wildlife to move freely across the landscape.</p>
+          <p class="content-section__text">We believe that a healthy ranch is one where horses, birds, deer, foxes, and countless other species coexist in harmony — and where every visitor can witness the beauty of that balance.</p>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/cowboy-silhouette.webp" alt="Wildlife at Meadowlark Ranch" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+</ContentPageLayout>

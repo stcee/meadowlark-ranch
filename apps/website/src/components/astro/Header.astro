@@ -1,0 +1,154 @@
+---
+import navigationData from '@data/navigation.json';
+
+const { mainNav } = navigationData;
+---
+
+<header class="header">
+  <div class="header__inner">
+    <a href="/" class="header__logo">
+      <img src="/images/logo-green.webp" alt="Meadowlark Ranch" width="150" height="50">
+    </a>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        {mainNav.map((item: any) => (
+          <li class="nav__item">
+            {item.type === 'dropdown' ? (
+              <>
+                <a href="#" class="nav__link">
+                  {item.label}
+                  <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 8L1 3h10z"/></svg>
+                </a>
+                <div class="mega-menu">
+                  <div class="mega-menu__links">
+                    {item.sections.map((section: any) => (
+                      <div class="mega-menu__section">
+                        <div class="mega-menu__title">{section.heading}</div>
+                        {section.links.map((link: any) => (
+                          <a href={link.href} class="mega-menu__link">{link.label}</a>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                  {item.featuredCards && item.featuredCards.length > 0 && (
+                    <div class="mega-menu__cards">
+                      {item.featuredCards.map((card: any) => (
+                        <a href={card.href} class="mega-menu__card">
+                          <video autoplay muted loop playsinline class="mega-menu__video">
+                            <source src={card.video} type="video/mp4">
+                          </video>
+                          <div class="mega-menu__card-content">
+                            <h4>{card.title}</h4>
+                            <span class="mega-menu__card-btn">
+                              Learn More
+                              <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                            </span>
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </>
+            ) : item.type === 'button' ? (
+              <a href={item.href} class="btn btn--primary">
+                {item.label}
+                <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+              </a>
+            ) : (
+              <a href={item.href} class="nav__link">{item.label}</a>
+            )}
+          </li>
+        ))}
+      </ul>
+
+      <button class="nav__toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- Mobile Navigation -->
+<nav class="mobile-nav">
+  <ul class="mobile-nav__list">
+    {mainNav.map((item: any) => (
+      <li class="mobile-nav__item">
+        {item.type === 'dropdown' ? (
+          <>
+            <a href="#" class="mobile-nav__link" data-dropdown>
+              {item.label}
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><path d="M6 8L1 3h10z"/></svg>
+            </a>
+            <div class="mobile-nav__dropdown">
+              {item.sections.map((section: any) => (
+                <div class="mobile-nav__dropdown-section">
+                  <div class="mobile-nav__dropdown-title">{section.heading}</div>
+                  {section.links.map((link: any) => (
+                    <a href={link.href} class="mobile-nav__dropdown-link">{link.label}</a>
+                  ))}
+                </div>
+              ))}
+              {item.featuredCards && item.featuredCards.length > 0 && (
+                <div class="mobile-nav__video-cards">
+                  {item.featuredCards.map((card: any) => (
+                    <a href={card.href} class="mobile-nav__video-card">
+                      <video autoplay muted loop playsinline>
+                        <source src={card.video} type="video/mp4">
+                      </video>
+                      <div class="mobile-nav__video-card-content">
+                        <h4 class="mobile-nav__video-card-title">{card.title}</h4>
+                        <span class="mobile-nav__video-card-btn">
+                          Learn More
+                          <svg viewBox="0 0 20 20" fill="currentColor" width="10" height="10"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                        </span>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+          </>
+        ) : (
+          <a href={item.href || '#'} class="mobile-nav__link">{item.label}</a>
+        )}
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<script>
+  // Mobile navigation toggle
+  const toggle = document.querySelector('.nav__toggle');
+  const mobileNav = document.querySelector('.mobile-nav');
+
+  if (toggle && mobileNav) {
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('active');
+      mobileNav.classList.toggle('active');
+      document.body.classList.toggle('nav-open');
+    });
+
+    // Handle dropdown toggles
+    const dropdownToggles = mobileNav.querySelectorAll('.mobile-nav__link[data-dropdown]');
+    dropdownToggles.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        btn.parentElement?.classList.toggle('active');
+      });
+    });
+
+    // Close mobile nav when clicking a page link
+    const mobileLinks = mobileNav.querySelectorAll('.mobile-nav__dropdown-link');
+    mobileLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        toggle.classList.remove('active');
+        mobileNav.classList.remove('active');
+        document.body.classList.remove('nav-open');
+      });
+    });
+  }
+</script>

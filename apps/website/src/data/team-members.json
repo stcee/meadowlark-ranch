@@ -1,0 +1,28 @@
+{
+  "members": [
+    {
+      "name": "Dr. Kirk Mitchell",
+      "role": "Founder & Owner",
+      "bio": "A board-certified physician and lifelong draft horse enthusiast, Dr. Mitchell founded Meadowlark Ranch to unite his dual passions for compassionate care and heritage horse preservation. As the founder of both Compassionate Concierge Physicians and CCP Percherons, he brings the same dedication to excellence in medicine to the world of competitive draft horse showing.",
+      "image": "mitchell-portrait.webp",
+      "featured": true,
+      "sortOrder": 1
+    },
+    {
+      "name": "Wilbur Helmuth",
+      "role": "Head Trainer & Driver",
+      "bio": "With deep roots in Iowa's Amish farming community—the very community credited with preserving Percheron horses during their near-extinction—Wilbur brings generational expertise to the CCP Percherons program. His skilled horsemanship and dedication to traditional training methods make him an invaluable leader of our equine operations.",
+      "image": "wilbur-helmuth.webp",
+      "featured": true,
+      "sortOrder": 2
+    },
+    {
+      "name": "Makenna Helmuth",
+      "role": "Assistant Trainer & Driver",
+      "bio": "Makenna combines natural horsemanship talent with a deep understanding of Percheron care and training. As assistant trainer, she plays a vital role in preparing the CCP Percherons hitch for competition while helping maintain the high standards of animal care at Meadowlark Ranch Too.",
+      "image": "makenna-helmuth.webp",
+      "featured": true,
+      "sortOrder": 3
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+---
+import ContentPageLayout from '../layouts/ContentPageLayout.astro';
+
+const schedule2026 = [
+  { date: 'March 14-16', event: 'Colorado Spring Draft Horse Show', location: 'National Western Complex, Denver, CO' },
+  { date: 'May 9-11', event: 'Rocky Mountain Draft Horse Classic', location: 'Boulder County Fairgrounds, Longmont, CO' },
+  { date: 'June 20-22', event: 'Western States Percheron Showcase', location: 'Colorado State Fairgrounds, Pueblo, CO' },
+  { date: 'July 18-20', event: 'Front Range Heritage Horse Festival', location: 'Larimer County Fairgrounds, Loveland, CO' },
+  { date: 'August 22-24', event: 'Great Plains Draft Horse Championship', location: 'National Western Complex, Denver, CO' },
+  { date: 'September 12-14', event: 'Harvest Classic Draft Horse Show', location: 'Island Grove Regional Park, Greeley, CO' },
+  { date: 'October 17-19', event: 'Western States Classic Finals', location: 'National Western Complex, Denver, CO' },
+];
+---
+
+<ContentPageLayout
+  title="Western States Classic"
+  description="Follow the CCP Percherons on the 2026 Western States Classic competition circuit — heritage draft horse showing at its finest."
+  heroLabel="Equine"
+  heroImage="/images/percherons-2.webp"
+  breadcrumbs={[{label: 'Home', href: '/'}, {label: 'Equine'}, {label: 'Western States Classic'}]}
+  cta={{title: 'Support Our Team', text: 'Cheer on the CCP Percherons at their next competition or become a sponsor of our draft horse showing program.', buttonText: 'Contact Us', buttonLink: '/contact'}}
+>
+  <section class="content-section section--cream">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>CCP Percherons on the Competition Circuit</h2>
+      <p class="content-section__text">The Western States Classic is the premier draft horse competition circuit in the western United States, showcasing the finest heritage breeds in halter, hitch, and driving classes. Meadowlark Ranch's CCP Percherons proudly compete throughout the season, representing our commitment to preserving these magnificent animals.</p>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="content-section__grid">
+        <div>
+          <h2>About Our Program</h2>
+          <p class="content-section__text">The CCP Percherons program, named after Compassionate Concierge Physicians, was launched to champion the Percheron breed through competitive showing and public education. Under the expert guidance of head trainer Wilbur Helmuth, our hitch has quickly earned recognition across the regional circuit.</p>
+          <p class="content-section__text">Each competition is an opportunity to share the story of the Percheron breed — from their near-extinction in the mid-20th century to their resurgence through dedicated breeders and programs like ours.</p>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/percherons-2.webp" alt="CCP Percherons in competition" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--cream">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 2rem;">2026 Competition Schedule</h2>
+      <div class="schedule-table-wrapper">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Event</th>
+              <th>Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            {schedule2026.map((item) => (
+              <tr>
+                <td>{item.date}</td>
+                <td>{item.event}</td>
+                <td>{item.location}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="content-section__text" style="text-align: center; margin-top: 1.5rem; font-style: italic;">Schedule subject to change. Contact us for the latest updates and to arrange VIP access at any event.</p>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="content-section__grid content-section__grid--reverse">
+        <div>
+          <h2>Competition Classes</h2>
+          <p class="content-section__text">The CCP Percherons compete in multiple classes throughout the Western States Classic circuit, demonstrating the versatility, power, and grace that define the Percheron breed.</p>
+          <ul class="feature-list">
+            <li>Six-Horse Hitch — the pinnacle of draft horse showing</li>
+            <li>Four-Horse Hitch — precision teamwork and presentation</li>
+            <li>Unicorn Hitch — three-horse configuration showcasing control</li>
+            <li>Halter Classes — breed conformation and individual excellence</li>
+            <li>Cart and Driving — single horse elegance and athleticism</li>
+          </ul>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/slider-3.webp" alt="CCP Percherons hitch team" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--cream">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>Come Watch Us Compete</h2>
+      <p class="content-section__text">We welcome fans, sponsors, and supporters at every event on our circuit. There is nothing quite like witnessing a six-horse Percheron hitch in action — the ground-shaking power, the synchronized precision, and the unmistakable bond between horses and driver. We hope to see you there.</p>
+    </div>
+  </section>
+</ContentPageLayout>
+
+<style>
+  .schedule-table-wrapper {
+    overflow-x: auto;
+  }
+
+  .schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--color-white, #fff);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  .schedule-table thead {
+    background: var(--color-primary, #2c1810);
+    color: #fff;
+  }
+
+  .schedule-table th {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.85rem;
+  }
+
+  .schedule-table td {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    font-size: 0.95rem;
+    color: var(--color-text, #4a4a4a);
+  }
+
+  .schedule-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .schedule-table tbody tr:hover {
+    background: rgba(139, 105, 20, 0.04);
+  }
+
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+  }
+
+  .feature-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.75rem;
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text, #4a4a4a);
+  }
+
+  .feature-list li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent, #8b6914);
+    font-weight: bold;
+  }
+</style>

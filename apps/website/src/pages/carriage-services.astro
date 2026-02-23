@@ -1,0 +1,108 @@
+---
+import ContentPageLayout from '../layouts/ContentPageLayout.astro';
+---
+
+<ContentPageLayout
+  title="Carriage Services"
+  description="Experience the magic of a horse-drawn carriage ride with our magnificent Percheron horses at Meadowlark Ranch in Boulder County, Colorado."
+  heroLabel="Events"
+  heroImage="/images/carriage-ride.webp"
+  breadcrumbs={[{label: 'Home', href: '/'}, {label: 'Events'}, {label: 'Carriage Services'}]}
+  cta={{title: 'Book Your Carriage Experience', text: 'Create timeless memories with a horse-drawn carriage ride through the Colorado foothills.', buttonText: 'Reserve Your Ride', buttonLink: '/contact'}}
+>
+  <section class="content-section section--cream">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>A Timeless Tradition</h2>
+      <p class="content-section__text">There is something profoundly magical about the rhythmic clip-clop of hooves, the gentle sway of a carriage, and the Colorado sky stretching endlessly overhead. Meadowlark Ranch's carriage services bring this timeless tradition to life with our magnificent Percheron horses and beautifully maintained carriages.</p>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="content-section__grid">
+        <div>
+          <h2>Our Percheron Horses</h2>
+          <p class="content-section__text">Our carriage fleet is powered by the finest Percheron horses in the region — gentle giants standing over 17 hands tall and weighing upwards of 2,000 pounds. Despite their impressive stature, Percherons are known for their calm temperament, intelligence, and willingness to work, making them the ideal carriage horse.</p>
+          <p class="content-section__text">Each of our Percherons is meticulously trained and cared for under the expert guidance of our head trainer, Wilbur Helmuth, whose deep roots in the Amish farming tradition bring generational expertise to our program.</p>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/percherons-2.webp" alt="Percheron horses at Meadowlark Ranch" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--cream">
+    <div class="container">
+      <div class="content-section__grid content-section__grid--reverse">
+        <div>
+          <h2>Wedding Carriage Service</h2>
+          <p class="content-section__text">Make your wedding day unforgettable with a grand carriage entrance or a romantic departure beneath the stars. Our wedding carriage service includes a decorated carriage, a matched pair of Percherons, and an experienced driver in period attire.</p>
+          <ul class="feature-list">
+            <li>Decorated carriage with florals and ribbon to match your theme</li>
+            <li>Matched pair of Percheron horses in polished harness</li>
+            <li>Professional driver in formal or western attire</li>
+            <li>Scenic route options on the ranch property</li>
+            <li>Photo opportunity stops along the ride</li>
+          </ul>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/carriage-ride.webp" alt="Wedding carriage service" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="content-section__grid">
+        <div>
+          <h2>Special Occasion &amp; Holiday Rides</h2>
+          <p class="content-section__text">Our carriage services extend beyond weddings to include romantic anniversary rides, birthday celebrations, holiday experiences, and private touring. Each ride is tailored to the occasion and can include custom touches such as champagne service, blankets, and seasonal decor.</p>
+          <ul class="feature-list">
+            <li>Romantic sunset rides for couples</li>
+            <li>Family holiday carriage experiences</li>
+            <li>Group touring for private events</li>
+            <li>Corporate hospitality rides</li>
+            <li>Seasonal holiday-themed carriage experiences</li>
+          </ul>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/cowgirl-hero.webp" alt="Special occasion carriage ride" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--cream">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>Safety &amp; Comfort</h2>
+      <p class="content-section__text">Every carriage ride at Meadowlark Ranch prioritizes the safety of our guests and the well-being of our horses. Our drivers are experienced professionals, our equipment is regularly inspected and maintained, and our routes are carefully selected for a smooth, enjoyable experience.</p>
+    </div>
+  </section>
+</ContentPageLayout>
+
+<style>
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+  }
+
+  .feature-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.75rem;
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text, #4a4a4a);
+  }
+
+  .feature-list li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent, #8b6914);
+    font-weight: bold;
+  }
+</style>

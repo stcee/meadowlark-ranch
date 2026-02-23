@@ -1,0 +1,35 @@
+---
+/**
+ * PageHero.astro
+ * Full-width page hero banner with optional background image, parallax effect,
+ * label, title, and subtitle. Matches the original .page-header CSS.
+ */
+
+interface Props {
+  title: string;
+  label?: string;
+  subtitle?: string;
+  backgroundImage?: string;
+}
+
+const { title, label, subtitle, backgroundImage } = Astro.props;
+---
+
+<section class="page-header page-header--parallax">
+  {backgroundImage && (
+    <div class="page-header__bg-wrapper">
+      <img
+        src={backgroundImage}
+        alt=""
+        class="page-header__bg--parallax"
+        loading="eager"
+      />
+    </div>
+  )}
+  <div class="page-header__overlay"></div>
+  <div class="page-header__content">
+    {label && <p class="page-header__label">{label}</p>}
+    <h1 class="page-header__title">{title}</h1>
+    {subtitle && <p class="page-header__subtitle">{subtitle}</p>}
+  </div>
+</section>

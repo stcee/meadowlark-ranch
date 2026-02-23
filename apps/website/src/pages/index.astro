@@ -1,0 +1,230 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import SEO from '../components/astro/SEO.astro';
+import HeroSlider from '../components/react/HeroSlider';
+import FaqAccordion from '../components/react/FaqAccordion';
+import Lightbox from '../components/react/Lightbox';
+import ServiceCard from '../components/astro/ServiceCard.astro';
+
+const heroSlides = [
+  { src: '/images/slider-1.webp', alt: 'Cowboy hat on fence post' },
+  { src: '/images/slider-2.webp', alt: 'Saddles on fence' },
+  { src: '/images/slider-3.webp', alt: 'Six black horses' },
+  { src: '/images/slider-4.webp', alt: 'Riders in field' },
+  { src: '/images/slider-5.webp', alt: 'Horse parade' },
+];
+
+const homeFaqs = [
+  {
+    question: 'What types of events do you host?',
+    answer: 'Meadowlark Ranch hosts milestone celebrations, private gatherings, and corporate events, including weddings, anniversaries, birthdays, reunions, celebrations of life, team retreats, and offsite meetings. We offer a range of indoor and outdoor spaces, horse-drawn carriage options, seasonal events, and customizable packages designed to reflect your vision and values.',
+  },
+  {
+    question: 'Do you offer corporate retreats and team-building experiences?',
+    answer: "Yes. Our corporate events and retreats combine inspiring spaces with meaningful, wellness-forward programming. Teams can enjoy unique meeting environments, equine-informed activities, guided time in nature, and curated agendas that foster connection, creativity, and well-being—supported by our experienced planning team.",
+  },
+  {
+    question: 'Is Meadowlark Ranch suitable for guests who are new to horses?',
+    answer: "Absolutely. You do not need any horse experience to feel welcome here. Our team prioritizes safety, education, and comfort, introducing guests to our heritage horses in gentle, guided ways—whether that's through tours, ground-based interactions, or simply spending quiet time observing and learning.",
+  },
+  {
+    question: 'Can I host an event or retreat at the resort?',
+    answer: "Yes. We love hosting intimate retreats, workshops and gatherings. Please contact us directly — we'll help you design an experience that feels right.",
+  },
+];
+
+const services = [
+  {
+    title: 'Corporate Events',
+    description: 'Our suite of services includes inspired event design, full-service rentals, and a choice of elegant indoor and outdoor venues, ensuring your vision comes to life with effortless style.',
+    image: '/images/lifestyle-1.webp',
+    href: '/corporate-events',
+  },
+  {
+    title: 'Carriage Services',
+    description: 'Gliding through our historic grounds in a horse-drawn carriage, or a breath-taking adventure on a guided horseback ride along scenic trails next to the famous Flatiron Mountains.',
+    image: '/images/carriage-services.webp',
+    href: '/carriage-services',
+  },
+  {
+    title: 'Special Occasions',
+    description: 'From intimate gatherings to grand celebrations, our expert planners meticulously craft delightful bespoke experiences for your closest family members and friends.',
+    image: '/images/fire-chat.webp',
+    href: '/special-occasions',
+  },
+  {
+    title: 'Private Events',
+    description: 'Host your next private event at Meadowlark Ranch, where every detail is elevated to create unforgettable moments in a breathtaking Colorado setting.',
+    image: '/images/lifestyle-2.webp',
+    href: '/private-events',
+  },
+];
+---
+
+<PageLayout title="Home" description="Meadowlark Ranch - A vibrant guest ranch in Boulder County, CO dedicated to preserving heritage horse breeds and fostering meaningful connections through immersive equine experiences.">
+  <SEO
+    slot="seo"
+    title="Meadowlark Ranch"
+    description="A vibrant guest ranch in Boulder County, CO dedicated to preserving heritage horse breeds and fostering meaningful connections through immersive equine experiences."
+    type="website"
+  />
+
+  <!-- Hero Section -->
+  <HeroSlider
+    client:load
+    slides={heroSlides}
+    heroLabel="Welcome to"
+    heroTitle="Meadowlark Ranch"
+    heroSubtitle="Boulder County, CO"
+    ctaText="Event Services"
+    ctaHref="/planning-services"
+  />
+
+  <!-- About Section -->
+  <section class="about">
+    <div class="container">
+      <svg class="about__icon" viewBox="0 0 80 80" fill="currentColor">
+        <rect x="25" y="35" width="30" height="40" stroke="currentColor" stroke-width="2" fill="none"/>
+        <rect x="30" y="40" width="8" height="12" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        <rect x="42" y="40" width="8" height="12" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        <rect x="36" y="58" width="8" height="17" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        <path d="M20 35 L40 15 L60 35" stroke="currentColor" stroke-width="2" fill="none"/>
+        <line x1="40" y1="15" x2="40" y2="5" stroke="currentColor" stroke-width="2"/>
+        <line x1="40" y1="5" x2="50" y2="5" stroke="currentColor" stroke-width="2"/>
+        <line x1="50" y1="5" x2="50" y2="20" stroke="currentColor" stroke-width="2"/>
+      </svg>
+      <p class="label about__label">About Us</p>
+      <p class="about__text">
+        A vibrant guest ranch dedicated to preserving heritage horse breeds and fostering meaningful connections through immersive equine experiences.
+      </p>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section class="story-section">
+    <div class="story-section__inner">
+      <div class="story-section__content">
+        <div class="story-section__header">
+          <span class="story-section__label">Western Beauty</span>
+          <span class="story-section__label">in Boulder County, CO</span>
+        </div>
+        <h2 class="story-section__title">Our Story</h2>
+        <p class="story-section__text">
+          At its heart, the ranch brings together expert horse trainers, innovative equine therapeutic modalities, and transformative coaching—all set within an environment that prioritizes wellness, learning, and authentic community.
+        </p>
+        <a href="/history" class="btn btn--outline btn--light">
+          Explore Our History
+          <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+        </a>
+        <div class="story-section__thumbnails">
+          <div class="story-section__thumb">
+            <img src="/images/ranch-photo-1.webp" alt="Ranch scene" class="lightbox-trigger">
+          </div>
+          <div class="story-section__thumb">
+            <img src="/images/cowboy-silhouette.webp" alt="Cowboy silhouette" class="lightbox-trigger">
+          </div>
+        </div>
+      </div>
+      <div class="story-section__image">
+        <img src="/images/horses-field.webp" alt="Horses in field">
+      </div>
+    </div>
+  </section>
+
+  <!-- Heart of a Cowboy Section -->
+  <section class="story" style="background-color: var(--color-primary-light);">
+    <div class="container">
+      <div class="story__content" style="grid-template-columns: 1fr 1.5fr;">
+        <div class="story__images" style="grid-template-columns: 1fr;">
+          <div class="story__image">
+            <img src="/images/mitchell-portrait.webp" alt="Dr. Kirk Mitchell at Meadowlark Ranch" style="height: 400px;">
+          </div>
+        </div>
+        <div class="story__text-content">
+          <h2 class="story__title">Heart of a Cowboy</h2>
+          <p class="story__text">
+            Guests are invited to engage with horses in hands-on, educational, and therapeutic activities that nurture personal growth and collective well-being. By championing stewardship, education, and holistic care, Meadowlark Ranch stands as a unique haven for those seeking renewal, inspiration, and a deeper bond with both horses and one another.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services">
+    <div class="container">
+      <svg class="services__icon" viewBox="0 0 60 60" fill="currentColor">
+        <path d="M30 5 L55 20 L55 45 L30 55 L5 45 L5 20 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+        <circle cx="30" cy="30" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+      </svg>
+      <p class="label services__label">Our Services</p>
+      <h2 class="services__title">Adventures for every season</h2>
+    </div>
+
+    <div class="services__grid">
+      {services.map((service) => (
+        <ServiceCard
+          title={service.title}
+          description={service.description}
+          image={service.image}
+          href={service.href}
+        />
+      ))}
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="mission">
+    <div class="container">
+      <div class="mission__content">
+        <div class="mission__text-content">
+          <h2 class="mission__title">Our mission to preserve rare horse breeds</h2>
+          <p class="mission__text">
+            Meadowlark Ranch is dedicated to thoughtfully preserving rare and heritage horse breeds, championing their ongoing legacy through education, stewardship, and immersive guest experiences.
+          </p>
+          <p class="mission__text">
+            Our mission integrates the well-being and conservation of these breeds with world-class hospitality and holistic wellness, inviting guests to become active participants in a meaningful cause.
+          </p>
+        </div>
+        <div class="mission__image">
+          <img src="/images/percherons-2.webp" alt="Percheron horses at Meadowlark Ranch">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq">
+    <div class="container">
+      <FaqAccordion
+        client:visible
+        faqs={homeFaqs}
+        title="Frequently Asked Questions"
+        label="FAQ"
+      />
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <img src="/images/horses-running.webp" alt="Horses at Meadowlark Ranch" class="cta__bg">
+    <div class="container">
+      <div class="cta__content">
+        <h2 class="cta__title">Join us at Meadowlark Ranch</h2>
+        <p class="cta__text">
+          Your visit does more than create memories and make a difference. At Meadowlark Ranch, every guest visit supports the preservation of rare horse breeds and becomes part of a vibrant community dedicated to wellness and connection.
+        </p>
+        <p class="cta__text">
+          Take the reins – reserve your experience today and be a part of something truly remarkable.
+        </p>
+        <a href="/contact" class="btn btn--primary">
+          Contact Us
+          <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox (hydrated on idle for image clicks) -->
+  <Lightbox client:idle />
+</PageLayout>

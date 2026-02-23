@@ -1,0 +1,49 @@
+---
+import ContentPageLayout from '../layouts/ContentPageLayout.astro';
+---
+
+<ContentPageLayout
+  title="Mission & Vision"
+  description="Discover the dual mission of Meadowlark Ranch — preserving heritage horse breeds and fostering healing through immersive equine experiences in Boulder County, Colorado."
+  heroLabel="About Us"
+  heroImage="/images/horses-field.webp"
+  breadcrumbs={[{label: 'Home', href: '/'}, {label: 'About'}, {label: 'Mission & Vision'}]}
+  cta={{title: 'Experience Our Mission', text: 'Visit Meadowlark Ranch and become part of our story.', buttonText: 'Contact Us', buttonLink: '/contact'}}
+>
+  <section class="content-section section--cream">
+    <div class="container">
+      <div class="content-section__grid">
+        <div>
+          <h2>A Place for Healing</h2>
+          <p class="content-section__text">Tucked away in a quiet corner of Boulder County with the foothills as a backdrop, Meadowlark Ranch provides professional emotional, behavioral, and relational healing for children, families, individuals, and groups.</p>
+          <p class="content-section__text">From the handcrafted barn to winding pathways along pastures and bird sanctuaries, our family-owned ranch is designed and dedicated to creating a healing environment for people of all ages and backgrounds seeking insight, support, and guidance.</p>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/horses-field.webp" alt="Peaceful horses at Meadowlark Ranch" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="content-section__grid content-section__grid--reverse">
+        <div>
+          <h2>A Legacy of Horses</h2>
+          <p class="content-section__text">Meadowlark Ranch is dedicated to thoughtfully preserving rare and heritage horse breeds, championing their ongoing legacy through education, stewardship, and immersive guest experiences.</p>
+          <p class="content-section__text">Our commitment to the Percheron breed — once numbering in the hundreds of thousands across America, reduced to just 85 registered animals by 1954 — drives everything we do. Through the CCP Percherons program, we are actively working to ensure these magnificent animals thrive for generations to come.</p>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/percherons-2.webp" alt="Percheron horses" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--cream">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>Our Vision for the Future</h2>
+      <p class="content-section__text">We envision Meadowlark Ranch as Colorado's premier destination for heritage horse preservation, equine-assisted healing, and world-class events — a place where the bond between humans and horses creates transformative experiences for every visitor.</p>
+    </div>
+  </section>
+</ContentPageLayout>

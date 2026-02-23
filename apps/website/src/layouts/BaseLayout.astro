@@ -1,0 +1,247 @@
+---
+/**
+ * BaseLayout.astro
+ * The HTML shell for all pages. Provides DOCTYPE, head meta, Google Fonts,
+ * global CSS imports, SEO slot, and inline vanilla JS for scroll animations,
+ * parallax, header shrink, back-to-top, and smooth anchor scrolling.
+ */
+
+import '@styles/global.css';
+import '@styles/components.css';
+import '@styles/animations.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <!-- Google Fonts: Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Google Fonts: Playfair Display + Lato -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Lato:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Page Title -->
+  <title>{title} | Meadowlark Ranch</title>
+
+  <!-- SEO slot for page-specific meta tags -->
+  <slot name="seo" />
+</head>
+<body>
+  <slot />
+
+  <!-- Inline Script: Scroll animations, parallax, header shrink, back-to-top, smooth scroll -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initHeader();
+      initScrollAnimations();
+      initParallax();
+      initBackToTop();
+      initSmoothScroll();
+    });
+
+    /**
+     * initHeader
+     * Shrinks the header after scrolling past 50px.
+     * Adds/removes the "header--scrolled" class on the header element.
+     */
+    function initHeader(): void {
+      const header = document.querySelector('.header') as HTMLElement | null;
+      if (!header) return;
+
+      const SCROLL_THRESHOLD = 50;
+
+      function onScroll(): void {
+        if (window.scrollY > SCROLL_THRESHOLD) {
+          header!.classList.add('header--scrolled');
+        } else {
+          header!.classList.remove('header--scrolled');
+        }
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      // Run once on load in case page is already scrolled
+      onScroll();
+    }
+
+    /**
+     * initScrollAnimations
+     * Uses IntersectionObserver to trigger "auto-animate" entrance animations
+     * and stagger-group animations when elements scroll into view.
+     */
+    function initScrollAnimations(): void {
+      // Animate individual elements with [data-animate] or .auto-animate
+      const animateElements = document.querySelectorAll(
+        '[data-animate], .auto-animate'
+      );
+
+      if (animateElements.length > 0) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px',
+          }
+        );
+
+        animateElements.forEach((el) => observer.observe(el));
+      }
+
+      // Stagger groups: elements inside .stagger-group get sequentially delayed
+      const staggerGroups = document.querySelectorAll('.stagger-group');
+
+      staggerGroups.forEach((group) => {
+        const children = group.querySelectorAll(
+          '[data-animate], .auto-animate'
+        );
+
+        const groupObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                children.forEach((child, index) => {
+                  const el = child as HTMLElement;
+                  el.style.transitionDelay = `${index * 0.1}s`;
+                  el.classList.add('animated');
+                });
+                groupObserver.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px',
+          }
+        );
+
+        groupObserver.observe(group);
+      });
+    }
+
+    /**
+     * initParallax
+     * Applies a vertical parallax translation to elements with data-parallax
+     * or specific parallax CSS classes using requestAnimationFrame.
+     */
+    function initParallax(): void {
+      const parallaxElements = document.querySelectorAll(
+        '[data-parallax], .page-header__bg--parallax, .hero__bg--parallax'
+      );
+
+      if (parallaxElements.length === 0) return;
+
+      let ticking = false;
+
+      function updateParallax(): void {
+        const scrollY = window.scrollY;
+
+        parallaxElements.forEach((el) => {
+          const element = el as HTMLElement;
+          const speed = parseFloat(element.dataset.parallaxSpeed || '0.3');
+          const rect = element.getBoundingClientRect();
+          const elementTop = rect.top + scrollY;
+          const offset = (scrollY - elementTop) * speed;
+
+          element.style.transform = `translate3d(0, ${offset}px, 0)`;
+        });
+
+        ticking = false;
+      }
+
+      function onScroll(): void {
+        if (!ticking) {
+          requestAnimationFrame(updateParallax);
+          ticking = true;
+        }
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      // Initial call
+      updateParallax();
+    }
+
+    /**
+     * initBackToTop
+     * Shows the back-to-top button when scrolled past 500px.
+     * Clicking scrolls smoothly to the top of the page.
+     */
+    function initBackToTop(): void {
+      const backToTop = document.querySelector('.back-to-top') as HTMLElement | null;
+      if (!backToTop) return;
+
+      const SHOW_THRESHOLD = 500;
+
+      function onScroll(): void {
+        if (window.scrollY > SHOW_THRESHOLD) {
+          backToTop!.classList.add('back-to-top--visible');
+        } else {
+          backToTop!.classList.remove('back-to-top--visible');
+        }
+      }
+
+      backToTop.addEventListener('click', (e: Event) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      // Run once on load
+      onScroll();
+    }
+
+    /**
+     * initSmoothScroll
+     * Intercepts clicks on anchor links (href starting with #) and performs
+     * smooth scrolling to the target element, accounting for header height.
+     */
+    function initSmoothScroll(): void {
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener('click', (e: Event) => {
+          const link = e.currentTarget as HTMLAnchorElement;
+          const targetId = link.getAttribute('href');
+
+          if (!targetId || targetId === '#') return;
+
+          const target = document.querySelector(targetId) as HTMLElement | null;
+          if (!target) return;
+
+          e.preventDefault();
+
+          const header = document.querySelector('.header') as HTMLElement | null;
+          const headerHeight = header ? header.offsetHeight : 0;
+          const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
+
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth',
+          });
+        });
+      });
+    }
+  </script>
+</body>
+</html>

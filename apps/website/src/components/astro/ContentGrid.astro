@@ -1,0 +1,32 @@
+---
+/**
+ * ContentGrid.astro
+ * Two-column content grid matching the .content-section CSS.
+ * Supports reversing column order and background color variants.
+ */
+
+interface Props {
+  reverse?: boolean;
+  background?: 'cream' | 'white' | 'primary';
+}
+
+const { reverse = false, background } = Astro.props;
+
+const sectionClass = [
+  'content-section',
+  background ? `section--${background}` : '',
+].filter(Boolean).join(' ');
+
+const gridClass = [
+  'content-section__grid',
+  reverse ? 'content-section__grid--reverse' : '',
+].filter(Boolean).join(' ');
+---
+
+<section class={sectionClass}>
+  <div class="container">
+    <div class={gridClass}>
+      <slot />
+    </div>
+  </div>
+</section>

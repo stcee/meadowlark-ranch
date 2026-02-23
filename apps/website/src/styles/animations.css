@@ -1,0 +1,202 @@
+/* =============================================
+   Meadowlark Ranch - Animations
+   All @keyframes, animation classes, hero
+   entrance animations, scroll animations,
+   and motion preference overrides.
+   ============================================= */
+
+/* ===== @keyframes Definitions ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes kenBurns {
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+    100% {
+        transform: scale(1.08) translate(-1%, -1%);
+    }
+}
+
+@keyframes galleryItemIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* ===== Enhanced Scroll Animations ===== */
+.animate-ready {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-fadeInUp {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.animate-fadeIn {
+    opacity: 1 !important;
+}
+
+.animate-fadeInLeft {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
+
+.animate-fadeInRight {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
+
+.animate-scaleIn {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+}
+
+/* Legacy animate-fadeInUp with keyframe (used directly without scroll observer) */
+.animate-fadeInUp {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* ===== Specific element animation variations ([data-animate]) ===== */
+[data-animate="fadeInLeft"].animate-ready {
+    transform: translateX(-30px);
+}
+
+[data-animate="fadeInRight"].animate-ready {
+    transform: translateX(30px);
+}
+
+[data-animate="scaleIn"].animate-ready {
+    transform: scale(0.9);
+}
+
+/* ===== Hero Entrance Animation ===== */
+.hero--loading .hero__bg {
+    transform: scale(1.1);
+    opacity: 0;
+}
+
+.hero--loading .hero__content {
+    opacity: 0;
+}
+
+.hero--loaded .hero__bg {
+    transition: transform 8s ease-out, opacity 1.5s ease-out;
+    opacity: 1;
+}
+
+.hero__bg--animate {
+    animation: kenBurns 20s ease-in-out infinite alternate;
+}
+
+/* Hero content entrance animations */
+.hero__label,
+.hero__title,
+.hero__subtitle,
+.hero__gallery,
+.hero .btn {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.hero__label.animate-in,
+.hero__title.animate-in,
+.hero__subtitle.animate-in,
+.hero__gallery.animate-in,
+.hero .btn.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Special animation for title - elegant fade with slight scale */
+.hero__title {
+    transform: translateY(40px) scale(0.95);
+}
+
+.hero__title.animate-in {
+    transform: translateY(0) scale(1);
+}
+
+/* ===== Gallery Item Stagger Animation ===== */
+
+/* Initially hide gallery items for stagger effect */
+.hero__gallery .hero__gallery-item {
+    opacity: 0;
+}
+
+.hero__gallery.animate-in .hero__gallery-item {
+    animation: galleryItemIn 0.6s ease-out forwards;
+}
+
+.hero__gallery-item:nth-child(1) { animation-delay: 0s; }
+.hero__gallery-item:nth-child(2) { animation-delay: 0.1s; }
+.hero__gallery-item:nth-child(3) { animation-delay: 0.2s; }
+.hero__gallery-item:nth-child(4) { animation-delay: 0.3s; }
+.hero__gallery-item:nth-child(5) { animation-delay: 0.4s; }
+
+/* ===== Service Card Animated Hover States ===== */
+.service-card.animated {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease-out;
+}
+
+.service-card.animated:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== FAQ Item Animate Ready ===== */
+.faq-item.animate-ready {
+    transform: translateY(20px);
+}
+
+/* ===== Delay Utilities ===== */
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+
+/* ===== Mobile Hero Animation Overrides ===== */
+@media (max-width: 768px) {
+    .hero--loaded .hero__bg {
+        transform: none;
+    }
+
+    .hero__bg--animate {
+        animation: none;
+        transform: none;
+    }
+}
+
+/* ===== Reduced Motion Preference ===== */
+@media (prefers-reduced-motion: reduce) {
+    .animate-ready {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .animate-fadeInUp,
+    .animate-fadeIn,
+    .animate-fadeInLeft,
+    .animate-fadeInRight,
+    .animate-scaleIn {
+        transition: none;
+    }
+}

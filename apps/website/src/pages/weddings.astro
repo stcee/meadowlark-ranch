@@ -1,0 +1,110 @@
+---
+import ContentPageLayout from '../layouts/ContentPageLayout.astro';
+---
+
+<ContentPageLayout
+  title="Weddings"
+  description="Host your dream wedding at Meadowlark Ranch — a luxurious Colorado venue with stunning mountain views, horse-drawn carriages, and bespoke event planning."
+  heroLabel="Events"
+  heroImage="/images/lifestyle-1.webp"
+  breadcrumbs={[{label: 'Home', href: '/'}, {label: 'Events'}, {label: 'Weddings'}]}
+  cta={{title: 'Begin Your Love Story', text: 'Let our expert planners craft a wedding day as extraordinary as your journey together.', buttonText: 'Schedule a Consultation', buttonLink: '/contact'}}
+>
+  <section class="content-section section--cream">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>A Wedding Venue Unlike Any Other</h2>
+      <p class="content-section__text">Surrounded by the grandeur of the Colorado foothills and the gentle presence of heritage Percheron horses, Meadowlark Ranch offers an unparalleled setting for your most cherished celebration. From intimate elopements to grand affairs, every wedding at the ranch is designed with intention, elegance, and warmth.</p>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="content-section__grid">
+        <div>
+          <h2>Indoor &amp; Outdoor Venues</h2>
+          <p class="content-section__text">Exchange vows beneath open skies with panoramic mountain views, then celebrate in our beautifully appointed barn or elegant covered pavilion. Our versatile spaces accommodate gatherings of every size, with seamless transitions between ceremony and reception.</p>
+          <ul class="feature-list">
+            <li>Handcrafted barn with rustic-luxury finishes</li>
+            <li>Covered outdoor pavilion with mountain panoramas</li>
+            <li>Manicured ceremony lawn with Flatiron backdrop</li>
+            <li>Climate-controlled indoor spaces for year-round comfort</li>
+            <li>Multiple outdoor gathering areas with fire features</li>
+          </ul>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/ranch-photo-1.webp" alt="Wedding venue at Meadowlark Ranch" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--cream">
+    <div class="container">
+      <div class="content-section__grid content-section__grid--reverse">
+        <div>
+          <h2>Horse-Drawn Carriage Arrivals</h2>
+          <p class="content-section__text">Make a grand entrance or a fairytale departure aboard one of our elegant horse-drawn carriages, pulled by our magnificent Percheron horses. This signature Meadowlark Ranch experience creates unforgettable moments and breathtaking photographs that you will treasure forever.</p>
+          <p class="content-section__text">Our experienced drivers ensure a safe, smooth, and magical experience for the wedding party and guests alike.</p>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/carriage-ride.webp" alt="Horse-drawn carriage for weddings" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="content-section__grid">
+        <div>
+          <h2>Full-Service Wedding Planning</h2>
+          <p class="content-section__text">Our dedicated event planning team works closely with each couple to bring their vision to life — from initial concept and vendor coordination to day-of execution. Every detail is thoughtfully managed so you can be fully present on your special day.</p>
+          <ul class="feature-list">
+            <li>Dedicated wedding planner and day-of coordinator</li>
+            <li>Preferred vendor network for catering, florals, photography, and music</li>
+            <li>Custom decor and styling consultation</li>
+            <li>Rehearsal dinner and post-wedding brunch coordination</li>
+            <li>Guest accommodation recommendations</li>
+            <li>Customizable event packages to suit every budget</li>
+          </ul>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/fire-chat.webp" alt="Wedding celebration at Meadowlark Ranch" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--cream">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>Your Day, Your Way</h2>
+      <p class="content-section__text">Whether you envision a rustic-elegant barn celebration, a garden ceremony at golden hour, or an intimate gathering by firelight, Meadowlark Ranch is ready to make your dream wedding a reality. No two weddings here are ever the same — because no two love stories are.</p>
+      <a href="/planning-services" class="btn btn--outline">Explore Our Event Services</a>
+    </div>
+  </section>
+</ContentPageLayout>
+
+<style>
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+  }
+
+  .feature-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.75rem;
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text, #4a4a4a);
+  }
+
+  .feature-list li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent, #8b6914);
+    font-weight: bold;
+  }
+</style>

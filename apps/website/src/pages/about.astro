@@ -1,0 +1,97 @@
+---
+import ContentPageLayout from '../layouts/ContentPageLayout.astro';
+---
+
+<ContentPageLayout
+  title="About Meadowlark Ranch"
+  description="Learn about Meadowlark Ranch — a premier guest ranch in Boulder County, Colorado dedicated to heritage horse preservation, equine-assisted healing, and world-class hospitality."
+  heroLabel="Discover"
+  heroImage="/images/slider-3.webp"
+  breadcrumbs={[{label: 'Home', href: '/'}, {label: 'About'}]}
+  cta={{title: 'Come Visit Us', text: 'Experience the beauty, history, and heart of Meadowlark Ranch for yourself.', buttonText: 'Contact Us', buttonLink: '/contact'}}
+>
+  <section class="content-section section--cream">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>Welcome to Meadowlark Ranch</h2>
+      <p class="content-section__text">Nestled in the foothills of Boulder County, Colorado, Meadowlark Ranch is a family-owned guest ranch where heritage horse preservation, compassionate healing, and world-class events come together in one extraordinary place.</p>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="content-section__grid">
+        <div>
+          <h2>Our Mission</h2>
+          <p class="content-section__text">We are dedicated to preserving rare and heritage horse breeds while fostering meaningful connections through immersive equine experiences. Our dual mission unites compassionate care, education, and stewardship in a setting designed to inspire healing and wonder.</p>
+          <a href="/mission-vision" class="btn btn--outline">Explore Our Mission &amp; Vision</a>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/horses-field.webp" alt="Horses grazing at Meadowlark Ranch" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--cream">
+    <div class="container">
+      <div class="content-section__grid content-section__grid--reverse">
+        <div>
+          <h2>Our Heritage</h2>
+          <p class="content-section__text">From humble beginnings as Meadowlark Shires to becoming one of Colorado's most distinctive guest ranch destinations, our story is one of passion, perseverance, and an unwavering love for horses. Explore the milestones that have shaped who we are today.</p>
+          <a href="/history" class="btn btn--outline">Explore Our History</a>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/cowboy-silhouette.webp" alt="Cowboy silhouette at Meadowlark Ranch" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="content-section__grid">
+        <div>
+          <h2>Stewardship &amp; Sustainability</h2>
+          <p class="content-section__text">Powered by solar energy, home to dedicated bird sanctuaries, and committed to sustainable land management, Meadowlark Ranch is a model of responsible stewardship on Colorado's Front Range.</p>
+          <a href="/stewardship" class="btn btn--outline">Our Stewardship Practices</a>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/ranch-photo-4.webp" alt="Nature and sustainability at Meadowlark Ranch" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--cream">
+    <div class="container">
+      <div class="content-section__grid content-section__grid--reverse">
+        <div>
+          <h2>Our Team</h2>
+          <p class="content-section__text">Led by founder Dr. Kirk Mitchell and supported by a team of expert horsemen and dedicated professionals, Meadowlark Ranch brings together decades of experience in equine care, competitive showing, and compassionate service.</p>
+          <a href="/leadership" class="btn btn--outline">Meet Our Leadership</a>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/mitchell-portrait.webp" alt="Dr. Kirk Mitchell at Meadowlark Ranch" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="content-section__grid">
+        <div>
+          <h2>Partners &amp; Sponsors</h2>
+          <p class="content-section__text">Our work is made possible through the generous support of sponsors and community partners who share our vision. Learn how you can join us in preserving heritage breeds and creating transformative experiences.</p>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="/sponsorships" class="btn btn--outline">Sponsorship Opportunities</a>
+            <a href="/partnerships" class="btn btn--outline">Partnership Programs</a>
+          </div>
+        </div>
+        <div class="content-section__image">
+          <img src="/images/percherons-2.webp" alt="CCP Percherons at Meadowlark Ranch" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+</ContentPageLayout>

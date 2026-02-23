@@ -1,0 +1,201 @@
+---
+import ContentPageLayout from '../layouts/ContentPageLayout.astro';
+---
+
+<ContentPageLayout
+  title="Directions"
+  description="Get directions to Meadowlark Ranch and Meadowlark Ranch Too — two locations in Boulder County, Colorado with easy access from Denver, Boulder, and Longmont."
+  heroLabel="Visit Us"
+  heroImage="/images/ranch-photo-1.webp"
+  breadcrumbs={[{label: 'Home', href: '/'}, {label: 'Directions'}]}
+  cta={{title: 'Questions About Getting Here?', text: 'Our team is happy to help with directions, parking, and accessibility information.', buttonText: 'Contact Us', buttonLink: '/contact'}}
+>
+  <section class="content-section section--cream">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>Two Locations, One Vision</h2>
+      <p class="content-section__text">Meadowlark Ranch operates from two properties in Boulder County, Colorado. Our main ranch is the home of guest experiences, events, and hospitality, while Meadowlark Ranch Too serves as our equine training and boarding facility.</p>
+    </div>
+  </section>
+
+  <section class="content-section section--white">
+    <div class="container">
+      <div class="locations-grid">
+        <div class="location-card">
+          <div class="location-card__header">
+            <h2 class="location-card__title">Meadowlark Ranch</h2>
+            <p class="location-card__subtitle">Guest Ranch &amp; Event Venue</p>
+          </div>
+          <div class="location-card__body">
+            <div class="location-card__address">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <div>
+                <p>9400 Ute Highway</p>
+                <p>Longmont, CO 80503</p>
+              </div>
+            </div>
+            <div class="location-card__directions">
+              <h3>Driving Directions</h3>
+              <div class="direction-block">
+                <h4>From Denver (approx. 45 min)</h4>
+                <ol>
+                  <li>Take I-25 North to Exit 243 (CO-66 West / Longmont / Lyons)</li>
+                  <li>Head west on CO-66 (Ute Highway) toward Lyons</li>
+                  <li>Continue approximately 8 miles on Ute Highway</li>
+                  <li>Meadowlark Ranch will be on your right</li>
+                </ol>
+              </div>
+              <div class="direction-block">
+                <h4>From Boulder (approx. 25 min)</h4>
+                <ol>
+                  <li>Take US-36 East toward Lyons / Estes Park</li>
+                  <li>Continue on CO-66 (Ute Highway) East through Lyons</li>
+                  <li>Continue approximately 5 miles past Lyons</li>
+                  <li>Meadowlark Ranch will be on your left</li>
+                </ol>
+              </div>
+              <div class="direction-block">
+                <h4>From Longmont (approx. 15 min)</h4>
+                <ol>
+                  <li>Head west on CO-66 (Ute Highway) toward Lyons</li>
+                  <li>Continue approximately 8 miles</li>
+                  <li>Meadowlark Ranch will be on your right</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="location-card">
+          <div class="location-card__header">
+            <h2 class="location-card__title">Meadowlark Ranch Too</h2>
+            <p class="location-card__subtitle">Equine Training &amp; Boarding Facility</p>
+          </div>
+          <div class="location-card__body">
+            <div class="location-card__address">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <div>
+                <p>Boulder County, CO</p>
+                <p>(Contact us for specific directions)</p>
+              </div>
+            </div>
+            <div class="location-card__directions">
+              <h3>Visit Information</h3>
+              <p class="content-section__text">Meadowlark Ranch Too is our dedicated equine facility, home to the CCP Percherons program and our boarding operations. Tours and visits are available by appointment only.</p>
+              <p class="content-section__text">Please contact us in advance to schedule a tour or visit. We will provide detailed directions and gate access information upon confirmation of your appointment.</p>
+              <a href="/meadowlark-ranch-too" class="btn btn--outline" style="margin-top: 1rem;">Learn More About the Facility</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section--cream">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <h2>Parking &amp; Arrival</h2>
+      <p class="content-section__text">Ample free parking is available at Meadowlark Ranch for all guests and event attendees. Oversized vehicle and trailer parking is available upon request. Please contact us in advance if you have specific accessibility needs, and our team will ensure your arrival is comfortable and seamless.</p>
+    </div>
+  </section>
+</ContentPageLayout>
+
+<style>
+  .locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2.5rem;
+  }
+
+  @media (max-width: 860px) {
+    .locations-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .location-card {
+    background: var(--color-white, #fff);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  .location-card__header {
+    background: var(--color-primary, #2c1810);
+    color: #fff;
+    padding: 1.5rem 2rem;
+  }
+
+  .location-card__title {
+    font-family: var(--font-heading, serif);
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .location-card__subtitle {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.85;
+  }
+
+  .location-card__body {
+    padding: 2rem;
+  }
+
+  .location-card__address {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .location-card__address svg {
+    flex-shrink: 0;
+    color: var(--color-accent, #8b6914);
+    margin-top: 2px;
+  }
+
+  .location-card__address p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--color-text, #4a4a4a);
+  }
+
+  .location-card__directions h3 {
+    font-family: var(--font-heading, serif);
+    font-size: 1.15rem;
+    color: var(--color-primary, #2c1810);
+    margin-bottom: 1rem;
+  }
+
+  .direction-block {
+    margin-bottom: 1.5rem;
+  }
+
+  .direction-block h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-accent, #8b6914);
+    margin-bottom: 0.5rem;
+  }
+
+  .direction-block ol {
+    padding-left: 1.25rem;
+    margin: 0;
+  }
+
+  .direction-block li {
+    padding: 0.3rem 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--color-text, #4a4a4a);
+  }
+</style>

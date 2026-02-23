@@ -1,0 +1,356 @@
+/* =============================================
+   Meadowlark Ranch - Global Styles
+   Main entry point: Tailwind v4, design tokens,
+   reset, typography, layout, buttons, forms,
+   and text utilities.
+   ============================================= */
+
+@import "tailwindcss";
+
+/* ===== Design Tokens (Tailwind v4 @theme syntax) ===== */
+@theme {
+    /* Colors */
+    --color-primary: #1a3c2a;
+    --color-primary-light: #2d5a3f;
+    --color-secondary: #8b5a2b;
+    --color-secondary-light: #a67c52;
+    --color-cream: #f5f0e8;
+    --color-cream-dark: #e8e0d0;
+    --color-footer: #043a2d;
+    --color-white: #ffffff;
+    --color-black: #1a1a1a;
+    --color-gray: #666666;
+    --color-gray-light: #999999;
+
+    /* Font families */
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ===== CSS Custom Properties (runtime variables) ===== */
+:root {
+    --color-primary: #1a3c2a;
+    --color-primary-light: #2d5a3f;
+    --color-secondary: #8b5a2b;
+    --color-secondary-light: #a67c52;
+    --color-cream: #f5f0e8;
+    --color-cream-dark: #e8e0d0;
+    --color-footer: #043a2d;
+    --color-white: #ffffff;
+    --color-black: #1a1a1a;
+    --color-gray: #666666;
+    --color-gray-light: #999999;
+    --color-green-dark: #1a3c2a;
+    --color-green: #2d5a3f;
+    --color-brown: #8b5a2b;
+
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
+
+    --max-width: 1400px;
+    --header-height: 80px;
+
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.15);
+    --shadow-lg: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+/* ===== Reset & Base Styles ===== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-black);
+    background-color: var(--color-cream);
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fix footer white strip - html/body background matches footer */
+html, body {
+    background-color: #043a2d;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition-fast);
+}
+
+ul, ol {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+}
+
+/* ===== Typography ===== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--color-primary);
+}
+
+h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-style: italic;
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-style: italic;
+}
+
+h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* ===== Text Utility Classes ===== */
+.text-white { color: var(--color-white); }
+.text-cream { color: var(--color-cream); }
+.text-primary { color: var(--color-primary); }
+.text-secondary { color: var(--color-secondary); }
+
+.label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+}
+
+/* ===== Layout Utilities ===== */
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.section {
+    padding: var(--spacing-xl) 0;
+}
+
+.section--primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.section--cream {
+    background-color: var(--color-cream);
+}
+
+.section--white {
+    background-color: var(--color-white);
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
+}
+
+/* ===== Buttons ===== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: all var(--transition-normal);
+}
+
+.btn--primary {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.btn--primary:hover {
+    background-color: var(--color-secondary-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn--outline {
+    background-color: transparent;
+    border: 2px solid var(--color-secondary);
+    color: var(--color-secondary);
+}
+
+.btn--outline:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.btn--white {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+}
+
+.btn--white:hover {
+    background-color: var(--color-cream);
+}
+
+.btn--green {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn--green:hover {
+    background-color: var(--color-primary-light);
+}
+
+.btn--light {
+    border-color: var(--color-cream) !important;
+    color: var(--color-cream) !important;
+}
+
+.btn--light:hover {
+    background-color: var(--color-cream) !important;
+    color: var(--color-primary) !important;
+}
+
+.btn--outline.btn--light {
+    border-width: 1px !important;
+    padding: 0.875rem 2rem;
+}
+
+.btn-arrow {
+    width: 20px;
+    height: 20px;
+    transition: transform var(--transition-fast);
+}
+
+.btn:hover .btn-arrow {
+    transform: translateX(4px);
+}
+
+/* ===== Form Styles ===== */
+.contact-form {
+    background-color: var(--color-white);
+    padding: var(--spacing-lg);
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--color-black);
+    background-color: var(--color-cream);
+    border: 2px solid transparent;
+    border-radius: 6px;
+    transition: all var(--transition-fast);
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+    background-color: var(--color-white);
+}
+
+.form-textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+}
+
+/* ===== Responsive: Mobile spacing & form adjustments ===== */
+@media (max-width: 768px) {
+    :root {
+        --spacing-lg: 3rem;
+        --spacing-xl: 4rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,35 @@
+---
+/**
+ * PageLayout.astro
+ * Extends BaseLayout. Adds the site Header, Footer, and back-to-top button.
+ * Use this for standard pages that need the full site chrome.
+ */
+
+import BaseLayout from './BaseLayout.astro';
+import Header from '../components/astro/Header.astro';
+import Footer from '../components/astro/Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <slot name="seo" slot="seo" />
+
+  <Header />
+
+  <slot />
+
+  <Footer />
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+</BaseLayout>
