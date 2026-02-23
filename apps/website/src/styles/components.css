@@ -1059,6 +1059,62 @@ footer.footer {
     color: var(--color-white);
 }
 
+.footer__contact-row {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: var(--spacing-md) 0 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.footer__contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer__contact-item svg {
+    color: rgba(255,255,255,0.6);
+    flex-shrink: 0;
+}
+
+.footer__contact-item a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color var(--transition-fast);
+}
+
+.footer__contact-item a:hover {
+    color: var(--color-white);
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: var(--spacing-sm) 0;
+}
+
+.footer__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.8);
+    transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.footer__social-link:hover {
+    background: rgba(255,255,255,0.2);
+    color: var(--color-white);
+}
+
 .footer__logo {
     display: flex;
     justify-content: center;

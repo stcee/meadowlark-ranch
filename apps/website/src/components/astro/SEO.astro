@@ -24,25 +24,24 @@ const {
 
 const fullTitle = `${title} | Meadowlark Ranch`;
 const siteName = 'Meadowlark Ranch';
+const siteUrl = 'https://meadowlarkranch.com';
+const resolvedCanonical = canonicalUrl || `${siteUrl}${Astro.url.pathname}`;
+const resolvedOgImage = ogImage || `${siteUrl}/images/slider-1.webp`;
 ---
 
-<!-- Primary Meta -->
-<title>{fullTitle}</title>
-<meta name="description" content={description} />
-
 <!-- Canonical URL -->
-{canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+<link rel="canonical" href={resolvedCanonical} />
 
 <!-- Open Graph -->
 <meta property="og:title" content={fullTitle} />
 <meta property="og:description" content={description} />
 <meta property="og:type" content={type} />
 <meta property="og:site_name" content={siteName} />
-{canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
-{ogImage && <meta property="og:image" content={ogImage} />}
+<meta property="og:url" content={resolvedCanonical} />
+<meta property="og:image" content={resolvedOgImage} />
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={fullTitle} />
 <meta name="twitter:description" content={description} />
-{ogImage && <meta name="twitter:image" content={ogImage} />}
+<meta name="twitter:image" content={resolvedOgImage} />

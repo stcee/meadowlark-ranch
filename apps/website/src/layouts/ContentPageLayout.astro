@@ -9,6 +9,7 @@ import PageLayout from './PageLayout.astro';
 import PageHero from '../components/astro/PageHero.astro';
 import Breadcrumbs from '../components/astro/Breadcrumbs.astro';
 import CtaSection from '../components/astro/CtaSection.astro';
+import SEO from '../components/astro/SEO.astro';
 
 interface BreadcrumbItem {
   label: string;
@@ -45,6 +46,7 @@ const {
 ---
 
 <PageLayout title={title} description={description}>
+  <SEO slot="seo" title={title} description={description} />
   <slot name="seo" slot="seo" />
 
   <PageHero

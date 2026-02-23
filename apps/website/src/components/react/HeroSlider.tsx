@@ -108,7 +108,7 @@ export default function HeroSlider({
               tabIndex={0}
               onKeyDown={(e) => e.key === 'Enter' && handleThumbClick(index)}
             >
-              <img src={slide.src} alt={slide.alt} />
+              <img src={slide.src} alt={slide.alt} loading="lazy" />
             </div>
           ))}
         </div>
