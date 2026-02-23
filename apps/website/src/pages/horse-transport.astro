@@ -6,7 +6,7 @@ import ContentPageLayout from '../layouts/ContentPageLayout.astro';
   title="Horse Transport"
   description="Professional horse transport and hauling services from Meadowlark Ranch — safe, reliable equine transportation across Colorado and the western states."
   heroLabel="Equine Services"
-  heroImage="/images/horses-running.webp"
+  heroImage="/images/percheron-barn-silhouette.jpg"
   breadcrumbs={[{label: 'Home', href: '/'}, {label: 'Equine Services'}, {label: 'Horse Transport'}]}
   cta={{title: 'Request Transport', text: 'Trust your horse to the experienced hands of the Meadowlark Ranch transport team.', buttonText: 'Get a Quote', buttonLink: '/contact'}}
 >
@@ -83,28 +83,3 @@ import ContentPageLayout from '../layouts/ContentPageLayout.astro';
     </div>
   </section>
 </ContentPageLayout>
-
-<style>
-  .feature-list {
-    list-style: none;
-    padding: 0;
-    margin: 1.5rem 0;
-  }
-
-  .feature-list li {
-    padding: 0.5rem 0;
-    padding-left: 1.75rem;
-    position: relative;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: var(--color-text, #4a4a4a);
-  }
-
-  .feature-list li::before {
-    content: '\2713';
-    position: absolute;
-    left: 0;
-    color: var(--color-accent, #8b6914);
-    font-weight: bold;
-  }
-</style>
