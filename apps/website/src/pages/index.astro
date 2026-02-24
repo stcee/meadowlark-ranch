@@ -86,20 +86,12 @@ const services = [
   <!-- About Section -->
   <section class="about">
     <div class="container">
-      <svg class="about__icon" viewBox="0 0 80 80" fill="currentColor">
-        <rect x="25" y="35" width="30" height="40" stroke="currentColor" stroke-width="2" fill="none"/>
-        <rect x="30" y="40" width="8" height="12" stroke="currentColor" stroke-width="1.5" fill="none"/>
-        <rect x="42" y="40" width="8" height="12" stroke="currentColor" stroke-width="1.5" fill="none"/>
-        <rect x="36" y="58" width="8" height="17" stroke="currentColor" stroke-width="1.5" fill="none"/>
-        <path d="M20 35 L40 15 L60 35" stroke="currentColor" stroke-width="2" fill="none"/>
-        <line x1="40" y1="15" x2="40" y2="5" stroke="currentColor" stroke-width="2"/>
-        <line x1="40" y1="5" x2="50" y2="5" stroke="currentColor" stroke-width="2"/>
-        <line x1="50" y1="5" x2="50" y2="20" stroke="currentColor" stroke-width="2"/>
-      </svg>
-      <p class="label about__label">About Us</p>
+      <div class="about__divider-top"></div>
+      <h2 class="about__heading">About Us</h2>
       <p class="about__text">
         A vibrant guest ranch dedicated to preserving heritage horse breeds and fostering meaningful connections through immersive equine experiences.
       </p>
+      <div class="about__divider-bottom"></div>
     </div>
   </section>
 
@@ -107,15 +99,12 @@ const services = [
   <section class="story-section">
     <div class="story-section__inner">
       <div class="story-section__content">
-        <div class="story-section__header">
-          <span class="story-section__label">Western Beauty</span>
-          <span class="story-section__label">in Boulder County, CO</span>
-        </div>
+        <span class="story-section__label">Western Beauty</span>
         <h2 class="story-section__title">Our Story</h2>
         <p class="story-section__text">
           At its heart, the ranch brings together expert horse trainers, innovative equine therapeutic modalities, and transformative coaching—all set within an environment that prioritizes wellness, learning, and authentic community.
         </p>
-        <a href="/history" class="btn btn--outline btn--light">
+        <a href="/history" class="btn btn--outline">
           Explore Our History
           <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
         </a>
@@ -130,6 +119,10 @@ const services = [
       </div>
       <div class="story-section__image">
         <img src="/images/horses-field.webp" alt="Horses in field">
+        <div class="story-section__badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          In Boulder County, CO
+        </div>
       </div>
     </div>
   </section>
