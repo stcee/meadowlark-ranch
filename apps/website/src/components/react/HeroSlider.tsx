@@ -12,6 +12,7 @@ interface HeroSliderProps {
   heroSubtitle?: string;
   ctaText?: string;
   ctaHref?: string;
+  mobileVideoSrc?: string;
 }
 
 export default function HeroSlider({
@@ -21,6 +22,7 @@ export default function HeroSlider({
   heroSubtitle = 'Boulder County, CO',
   ctaText = 'Event Services',
   ctaHref = '/planning-services',
+  mobileVideoSrc,
 }: HeroSliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -86,6 +88,17 @@ export default function HeroSlider({
         alt="Meadowlark Ranch landscape"
         className={`hero__bg ${isLoaded ? 'hero__bg--animate' : ''}`}
       />
+      {mobileVideoSrc && (
+        <video
+          className="hero__mobile-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src={mobileVideoSrc} type="video/mp4" />
+        </video>
+      )}
       <div className="hero__overlay" />
       <div className="hero__content">
         <p className={`hero__label ${animatedElements.has('label') ? 'animate-in' : ''}`}>
