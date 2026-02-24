@@ -174,7 +174,7 @@
     transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
     transform: translateX(-50%) translateY(10px);
     z-index: 1000;
-    min-width: 700px;
+    min-width: fit-content;
 }
 
 .nav__item:hover .mega-menu {
