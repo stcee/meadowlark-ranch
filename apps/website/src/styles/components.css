@@ -1821,6 +1821,7 @@ footer.footer {
 
     .header__logo {
         justify-content: center;
+        padding-right: calc(67px + 0.5rem);
     }
 
     .nav__toggle {
