@@ -51,12 +51,14 @@ const services = [
     description: 'From intimate gatherings to grand celebrations, our expert planners meticulously craft delightful bespoke experiences for your closest family members and friends.',
     image: '/images/fire-chat.webp',
     href: '/special-occasions',
+    textPosition: 'top' as const,
   },
   {
     title: 'Private Events',
     description: 'Host your next private event at Meadowlark Ranch, where every detail is elevated to create unforgettable moments in a breathtaking Colorado setting.',
     image: '/images/private-events-card.webp',
     href: '/private-events',
+    textPosition: 'top' as const,
   },
 ];
 ---
@@ -168,6 +170,7 @@ const services = [
           description={service.description}
           image={service.image}
           href={service.href}
+          textPosition={service.textPosition}
         />
       ))}
     </div>

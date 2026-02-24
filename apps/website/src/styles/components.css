@@ -34,10 +34,16 @@
 .header__logo {
     display: flex;
     align-items: center;
+    gap: 0.5rem;
 }
 
-.header__logo img {
-    height: 50px;
+.header__logo-horse {
+    height: 60px;
+    width: auto;
+}
+
+.header__logo-text {
+    height: 60px;
     width: auto;
 }
 
@@ -819,6 +825,14 @@
     line-height: 1.6;
     color: rgba(255,255,255,0.9);
     max-width: 350px;
+}
+
+.service-card--text-top {
+    justify-content: flex-start;
+}
+
+.service-card--text-top .service-card__overlay {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.1) 100%);
 }
 
 .service-card img {
@@ -1799,6 +1813,20 @@ footer.footer {
 
 /* Mobile (max-width: 768px) */
 @media (max-width: 768px) {
+    .header__inner {
+        justify-content: center;
+        position: relative;
+    }
+
+    .header__logo {
+        justify-content: center;
+    }
+
+    .nav__toggle {
+        position: absolute;
+        right: var(--spacing-md);
+    }
+
     .hero__gallery {
         flex-wrap: wrap;
     }
