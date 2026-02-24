@@ -111,6 +111,16 @@ export default function HeroSlider({
           {heroSubtitle}
         </p>
 
+        <img
+          src="/images/percheron-horse-rope-divider.png"
+          alt=""
+          className={`hero__divider ${animatedElements.has('gallery') ? 'animate-in' : ''}`}
+        />
+
+        <p className={`hero__tagline ${animatedElements.has('gallery') ? 'animate-in' : ''}`}>
+          Heritage Horses. Unforgettable Experiences.
+        </p>
+
         <div className={`hero__gallery ${animatedElements.has('gallery') ? 'animate-in' : ''}`}>
           {slides.map((slide, index) => (
             <div
@@ -139,6 +149,9 @@ export default function HeroSlider({
             />
           </svg>
         </a>
+      </div>
+      <div className={`hero__scroll-cue ${animatedElements.has('btn') ? 'animate-in' : ''}`}>
+        <img src="/images/meadowlark-scroll-cue.png" alt="Scroll down" />
       </div>
     </section>
   );
