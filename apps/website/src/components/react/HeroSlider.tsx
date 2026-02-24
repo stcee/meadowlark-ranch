@@ -117,10 +117,6 @@ export default function HeroSlider({
           className={`hero__divider ${animatedElements.has('gallery') ? 'animate-in' : ''}`}
         />
 
-        <p className={`hero__tagline ${animatedElements.has('gallery') ? 'animate-in' : ''}`}>
-          Heritage Horses. Unforgettable Experiences.
-        </p>
-
         <div className={`hero__gallery ${animatedElements.has('gallery') ? 'animate-in' : ''}`}>
           {slides.map((slide, index) => (
             <div
@@ -135,6 +131,10 @@ export default function HeroSlider({
             </div>
           ))}
         </div>
+
+        <p className={`hero__tagline ${animatedElements.has('btn') ? 'animate-in' : ''}`}>
+          Heritage Horses. Unforgettable Experiences.
+        </p>
 
         <a
           href={ctaHref}
