@@ -1998,7 +1998,8 @@ footer.footer {
 
     /* Mobile hero fixes */
     .hero {
-        min-height: 70vh;
+        min-height: 100vh;
+        min-height: 100dvh;
         padding-top: calc(var(--header-height) + 20px);
     }
 
